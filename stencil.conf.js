@@ -9,7 +9,7 @@ var watchOptions = {
   files: ['/templates', '/lang'],
 
   //Do not watch files in these directories
-  // ignored: ['/assets/scss', '/assets/less', '/assets/css', '/assets/dist'],
+  ignored: ['/assets/scss', '/assets/less', '/assets/css', '/assets/dist'],
 };
 
 /**

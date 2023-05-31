@@ -1,4 +1,41 @@
-{{#partial "head"}} {{/partial}} {{#partial "page"}}
+{{#partial "head"}}
+
+<script>
+  var tag = document.createElement('script');
+
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '1080',
+      width: '1920',
+      videoId: 'svNwCxJkNyc',
+      playerVars: {
+        autoplay: 1, // Auto-play the video on load
+        controls: 0, // Hide pause/play buttons in player
+        showinfo: 0, // Hide the video title
+        modestbranding: 1, // Hide the Youtube Logo
+        loop: 1, // Run the video in a loop
+        fs: 0, // Hide the full screen button
+        cc_load_policy: 0, // Hide closed captions
+        iv_load_policy: 3, // Hide the Video Annotations
+        autohide: 0, // Hide video controls when playing
+        playlist: 'svNwCxJkNyc', // Specify video ID again to loop
+      },
+      events: {
+        onReady: onPlayerReady,
+      },
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+</script>
+{{/partial}} {{#partial "page"}}
 
 <div class="mavens__base">
   <section class="mavens__hero">
@@ -20,34 +57,135 @@
     </div>
   </section>
   <div class="mavens__hero__video">
-    <video autoplay loop muted controls>
-      <source
-        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
+    <div id="player"></div>
   </div>
-  <section class="mavens__about__section">
-    <div class="left">
-      <button class="mavens__pill brown">About Us</button>
+  <div style="background-color: white">
+    <div class="mavens__max__width__container">
+      <section class="mavens__about__section">
+        <div class="left">
+          <button class="mavens__pill brown">About Us</button>
+        </div>
+        <div class="right">
+          <div>
+            <h2>Experts In Structural Engineering And Assessments</h2>
+            <p>
+              Building Mavens is your source for dependable engineering
+              services. Our team of professionals specializes in milestone
+              inspections among other engineering assistance. Located in Palm
+              Beach Gardens, we service clients across Florida.
+            </p>
+          </div>
+          <button class="mavens__pill">
+            <span>lorem ipsum</span>
+            <svg class="icon">
+              <use xlink:href="#icon-mavens-arrow-right" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="mavens__services__section">
+          <div>
+            <button class="mavens__pill brown">
+              <span>Our Service</span>
+            </button>
+          </div>
+          <h2>What We Specialize In</h2>
+          <h3>
+            Our company offers the following specialty engineering services:
+          </h3>
+        </div>
+        <div class="mavens__services__container">
+          <div class="mavens__service__card">
+            <button class="mavens__pill brown">01</button>
+            <div class="mavens__service__text__container">
+              <h3>Expert Witness and Construction Litigation Support</h3>
+              <div style="font-size: 48px">
+                <svg
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 1em; height: 1em"
+                >
+                  <path
+                    d="M15.505 28.05 28.05 15.508m0 0 .01 11.181m-.01-11.18-11.181-.01"
+                    stroke="#00308C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="mavens__service__card">
+            <button class="mavens__pill brown">02</button>
+            <div class="mavens__service__text__container">
+              <h3>Owner Representation</h3>
+              <div style="font-size: 48px">
+                <svg
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 1em; height: 1em"
+                >
+                  <path
+                    d="M15.505 28.05 28.05 15.508m0 0 .01 11.181m-.01-11.18-11.181-.01"
+                    stroke="#00308C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="mavens__service__card">
+            <button class="mavens__pill brown">03</button>
+            <div class="mavens__service__text__container">
+              <h3>Condominium Turnover and Property Condition Assessments</h3>
+              <div style="font-size: 48px">
+                <svg
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 1em; height: 1em"
+                >
+                  <path
+                    d="M15.505 28.05 28.05 15.508m0 0 .01 11.181m-.01-11.18-11.181-.01"
+                    stroke="#00308C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div style="margin: 70px 0px; padding-bottom: 40px">
+            <button class="mavens__pill">
+              <span>View all services</span>
+              <svg class="icon">
+                <use xlink:href="#icon-mavens-arrow-right" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="right">
-      <div>
-        <h2>Experts In Structural Engineering And Assessments</h2>
-        <p>
-          Building Mavens is your source for dependable engineering services.
-          Our team of professionals specializes in milestone inspections among
-          other engineering assistance. Located in Palm Beach Gardens, we
-          service clients across Florida.
-        </p>
+  </div>
+  <div class="mavens-hero">
+    <h1 class="mavens-heading">
+      <span>Let's Start</span>
+      <span>Something</span>
+      <span>New Together</span>
+    </h1>
+    <div class="mavens-sub-row">
+      <div class="mavens__cta__hero">
+        <svg><use xlink:href="#icon-mavens-cta" /></svg>
       </div>
-      <button class="mavens__pill">
-        <span>lorem ipsum</span>
-        <svg class="icon"><use xlink:href="#icon-mavens-arrow-right" /></svg>
-      </button>
     </div>
-  </section>
+  </div>
   <!-- <div class="mavens__divider"></div>
   <div class="parent">
     <div class="div1">
