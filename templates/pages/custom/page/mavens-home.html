@@ -1,5 +1,4 @@
 {{#partial "head"}}
-
 <script>
   var tag = document.createElement('script');
 
@@ -14,16 +13,16 @@
       width: '1920',
       videoId: 'svNwCxJkNyc',
       playerVars: {
-        autoplay: 1, // Auto-play the video on load
-        controls: 0, // Hide pause/play buttons in player
-        showinfo: 0, // Hide the video title
-        modestbranding: 1, // Hide the Youtube Logo
-        loop: 1, // Run the video in a loop
-        fs: 0, // Hide the full screen button
-        cc_load_policy: 0, // Hide closed captions
-        iv_load_policy: 3, // Hide the Video Annotations
-        autohide: 0, // Hide video controls when playing
-        playlist: 'svNwCxJkNyc', // Specify video ID again to loop
+        autoplay: 1,
+        controls: 0,
+        showinfo: 0,
+        modestbranding: 1,
+        loop: 1,
+        fs: 0,
+        cc_load_policy: 0,
+        iv_load_policy: 3,
+        autohide: 0,
+        playlist: 'svNwCxJkNyc',
       },
       events: {
         onReady: onPlayerReady,
@@ -36,29 +35,33 @@
   }
 </script>
 {{/partial}} {{#partial "page"}}
-
 <div class="mavens__base">
-  <section class="mavens__hero">
-    <div class="mavens-hero">
-      <h1 class="mavens-heading">
-        <span>Keep</span>
-        <span>Changing</span>
-      </h1>
-      <div class="mavens-sub-row">
-        <div class="mavens-sub-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic
-          molestias ex eum aut blanditiis placeat eveniet quo! Eum dicta debitis
-          quae ipsam expedita nemo unde optio nam quis aliquam.
-        </div>
-        <div class="mavens__cta__hero">
-          <svg><use xlink:href="#icon-mavens-cta" /></svg>
+  <div class="mavens__max__width__container">
+    <section>
+      <div class="mavens-hero">
+        <h1 class="mavens-heading">
+          <span>Keep</span>
+          <span>Changing</span>
+        </h1>
+        <div class="mavens-sub-row">
+          <div class="mavens-sub-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic
+            molestias ex eum aut blanditiis placeat eveniet quo! Eum dicta
+            debitis quae ipsam expedita nemo unde optio nam quis aliquam.
+          </div>
+          <div class="mavens__cta__hero">
+            <svg>
+              <use xlink:href="#icon-mavens-cta" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <div class="mavens__hero__video">
     <div id="player"></div>
   </div>
+
   <div style="background-color: white">
     <div class="mavens__max__width__container">
       <section class="mavens__about__section">
@@ -83,8 +86,9 @@
           </button>
         </div>
       </section>
-      <section>
-        <div class="mavens__services__section">
+
+      <section class="mavens__services__section">
+        <div class="mavens__services__header">
           <div>
             <button class="mavens__pill brown">
               <span>Our Service</span>
@@ -162,7 +166,7 @@
               </div>
             </div>
           </div>
-          <div style="margin: 70px 0px; padding-bottom: 40px">
+          <div>
             <button class="mavens__pill">
               <span>View all services</span>
               <svg class="icon">
@@ -174,58 +178,196 @@
       </section>
     </div>
   </div>
-  <div class="mavens-hero">
-    <h1 class="mavens-heading">
-      <span>Let's Start</span>
-      <span>Something</span>
-      <span>New Together</span>
-    </h1>
-    <div class="mavens-sub-row">
-      <div class="mavens__cta__hero">
-        <svg><use xlink:href="#icon-mavens-cta" /></svg>
+  <div class="mavens__max__width__container">
+    <div class="mavens__who_we__are__container">
+      <h3>Who We Are</h3>
+      <div class="mavens__subtext">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
+          reiciendis quae ab vel quo possimus praesentium quaerat obcaecati,
+          nulla dignissimos nostrum placeat eaque necessitatibus id esse, error
+          temporibus adipisci corrupti?
+        </p>
+        <button class="mavens__pill">
+          <span>Let's Work Together</span>
+        </button>
+      </div>
+      <div class="mavens__who__we__are__grid">
+        <div class="mavens__grid__item">
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div>
+          <h3>150+</h3>
+          <p>Satisfied Customers</p>
+        </div>
+        <div>
+          <h3>10+</h3>
+          <p>Awards Won</p>
+        </div>
+        <div>
+          <h3>200+</h3>
+          <p>Completed Projects</p>
+        </div>
       </div>
     </div>
   </div>
-  <!-- <div class="mavens__divider"></div>
-  <div class="parent">
-    <div class="div1">
-      <div><button class="mavens__pill brown">Our Service</button></div>
-      <div><h3>What We Specialize In</h3></div>
-      <div>
-        <h4>
-          Our company offers the following specialty engineering services:
-        </h4>
-      </div>
-    </div>
-    <div class="mavens__services div2">
-      <div><button class="mavens__pill brown">01</button></div>
-      <div class="middle">
-        <h2>Expert Witness and Construction Litigation Support</h2>
-      </div>
-      <div class="icon-container">
-        <svg class="icon"><use xlink:href="#icon-mavens-arrow-right" /></svg>
-      </div>
-    </div>
-    <div class="mavens__services div3">
-      <div><button class="mavens__pill brown">02</button></div>
-      <div class="middle">
-        <h2>Owner Representation</h2>
-      </div>
-      <div class="icon-container">
-        <svg class="icon"><use xlink:href="#icon-mavens-arrow-right" /></svg>
-      </div>
-    </div>
-    <div class="mavens__services div4">
-      <div><button class="mavens__pill brown">03</button></div>
-      <div class="middle">
-        <h2>Condominium Turnover and Property Condition Assessments</h2>
-      </div>
-      <div class="icon-container">
-        <svg class="icon"><use xlink:href="#icon-mavens-arrow-right" /></svg>
-      </div>
-    </div>
-  </div>
-</div>
+  <div style="background-color: white">
+    <div class="mavens__max__width__container">
+      <div class="mavens__project__section">
+        <div><button class="mavens__pill brown">Our Projects</button></div>
+        <h3>Find More Information About Our Building Inspection Services</h3>
+        <div class="mavens__project__container">
+          <div class="mavens__project__card">
+            <div>
+              <img
+                src="https://picsum.photos/619/443"
+                class="mavens__project__image"
+              />
+              <h4 class="mavens__image__subheading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, possimus ipsa soluta neque quod iure aliquam facilis
+                voluptates enim a minus similique, amet excepturi praesentium.
+                Cum culpa doloremque reiciendis eum?
+              </h4>
+              <p class="mavens__image__subtext">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+                perferendis provident excepturi cupiditate, ullam voluptates
+                placeat, qui sed mollitia libero dolor harum ex. Ipsam, quasi
+                quisquam! Officiis autem nihil quibusdam! Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Nam commodi tempore repellat
+                eius, voluptas ut ducimus laudantium excepturi assumenda! Nisi
+                atque sequi inventore cum sit ipsa aut mollitia provident
+                accusantium?
+              </p>
+              <div class="mavens__date">
+                <p>July 20, 2022</p>
+              </div>
+            </div>
+          </div>
 
-{{/partial}} {{> layout/base}} -->
+          <div class="mavens__project__card">
+            <div>
+              <img
+                src="https://picsum.photos/619/443"
+                class="mavens__project__image"
+              />
+              <h4 class="mavens__image__subheading">
+                The Requirements of the florida "Milestone Inspection Report"
+              </h4>
+              <p class="mavens__image__subtext">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, possimus ipsa soluta neque quod iure aliquam facilis
+                voluptates enim a minus similique, amet excepturi praesentium.
+                Cum culpa doloremque reiciendis eum
+              </p>
+              <div class="mavens__date">
+                <p>July 20, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mavens__blog__section">
+    <div class="mavens__max__width__container">
+      <div class="mavens__blog__container">
+        <div>
+          <button class="mavens__pill brown">
+            <span>Our Blogs</span>
+          </button>
+          <h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+            est dicta optio
+          </h3>
+        </div>
+
+        <div class="mavens__blog__card">
+          <div>
+            <img
+              src="https://picsum.photos/619/443"
+              class="mavens__project__image"
+            />
+          </div>
+          <div class="mavens__blog__title__container">
+            <h4 class="mavens__blog__title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              nisi nemo ut eos hic dolore ipsam exercitationem. Cum odio
+              voluptatem fugiat, placeat dicta nihil obcaecati cumque illum,
+              pariatur, laudantium reiciendis?
+            </h4>
+            <div class="mavens__blog__info">
+              <p class="category">Marketing</p>
+              <p class="date">October 23rd, 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="mavens__blog__card">
+          <div>
+            <img
+              src="https://picsum.photos/619/443"
+              class="mavens__project__image"
+            />
+          </div>
+          <div class="mavens__blog__title__container">
+            <h4 class="mavens__blog__title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              nisi nemo ut eos hic dolore ipsam exercitationem. Cum odio
+              voluptatem fugiat, placeat dicta nihil obcaecati cumque illum,
+              pariatur, laudantium reiciendis?
+            </h4>
+            <div class="mavens__blog__info">
+              <p class="category">Marketing</p>
+              <p class="date">October 23rd, 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="mavens__blog__card">
+          <div>
+            <img
+              src="https://picsum.photos/619/443"
+              class="mavens__project__image"
+            />
+          </div>
+          <div class="mavens__blog__title__container">
+            <h4 class="mavens__blog__title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              nisi nemo ut eos hic dolore ipsam exercitationem. Cum odio
+              voluptatem fugiat, placeat dicta nihil obcaecati cumque illum,
+              pariatur, laudantium reiciendis?
+            </h4>
+            <div class="mavens__blog__info">
+              <p class="category">Marketing</p>
+              <p class="date">October 23rd, 2023</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button class="mavens__pill white">
+            <span>View All Blogs</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mavens__max__width__container">
+    <div class="mavens-hero">
+      <h1 class="mavens-heading">
+        <span>Let's Start</span>
+        <span>Something</span>
+        <span>New Together</span>
+      </h1>
+      <div class="mavens-sub-row">
+        <div class="mavens__cta__hero">
+          <svg>
+            <use xlink:href="#icon-mavens-cta" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/partial}} {{> layout/base}}
 </div>
