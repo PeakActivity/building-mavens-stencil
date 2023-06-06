@@ -55,7 +55,7 @@ $max-width: 1440px;
 }
 
 .mavens__full__width__image {
-  background-image: url('../../../assets/img/water_club.png');
+  background-image: url("{{cdn 'assets/img/water_club.png'}}");
   background-position: center center;
   background-size: cover;
   min-height: 860px;
