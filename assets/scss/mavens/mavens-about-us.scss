@@ -46,16 +46,10 @@ $max-width: 1440px;
   background-color: white;
   padding: 80px 0px;
   color: black;
-  img {
-    padding: 80px 0px;
-    @media (min-width: $breakpoint-md) {
-      display: none;
-    }
-  }
 }
 
 .mavens__full__width__image {
-  background-image: url("{{cdn 'assets/img/water_club.png'}}");
+  background-image: url('../img/water_club.png');
   background-position: center center;
   background-size: cover;
   min-height: 860px;
@@ -63,6 +57,13 @@ $max-width: 1440px;
   margin: 120px 0px;
   @media (max-width: $breakpoint-md) {
     min-height: 378px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
