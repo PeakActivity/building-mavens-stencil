@@ -1,0 +1,147 @@
+$breakpoint-xs: 320px; // Extra small devices
+$breakpoint-sm: 576px; // Small devices
+$breakpoint-md: 768px; // Medium devices
+$breakpoint-lg: 992px; // Large devices
+$breakpoint-xl: 1200px; // Extra large devices
+$max-width: 1440px;
+
+.mavens-about-hero {
+  text-align: left;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .mavens-heading {
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 60px;
+    }
+  }
+}
+
+.mavens__split__image {
+  background: linear-gradient(to bottom, #00308c 50%, white 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 31px 0px 0px 0px;
+  img {
+    padding: 0 20px;
+  }
+  @media (min-width: $breakpoint-md) {
+    justify-content: flex-end;
+    padding-right: 80px;
+  }
+}
+
+.mavens-our-story-section {
+  p {
+    font-size: 32px;
+  }
+  background-color: white;
+  padding: 80px 0px;
+  color: black;
+  img {
+    padding: 80px 0px;
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
+.mavens__full__width__image {
+  background-image: url('../../../assets/img/water_club.png');
+  background-position: center center;
+  background-size: cover;
+  min-height: 860px;
+  min-width: 100%;
+  margin: 120px 0px;
+  @media (max-width: $breakpoint-md) {
+    min-height: 378px;
+  }
+}
+
+.values__container {
+  display: flex;
+  flex-direction: column;
+  .value__card {
+    h1 {
+      font-size: 48px;
+      color: black;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .value__card {
+      h1 {
+        font-size: 64px;
+      }
+      max-width: 45%;
+    }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.mavens__meet__the__team__section {
+  padding: 47px 0px;
+  h1 {
+    color: white;
+    font-size: 48px;
+  }
+
+  .team_member_container {
+    padding-top: 43px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    .team__member__card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .name {
+        font-size: 32px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        text-transform: capitalize;
+      }
+
+      .position {
+        font-size: 18px;
+        color: #a0a0a0;
+        text-transform: uppercase;
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .social__icon {
+          margin-right: 20px;
+          cursor: pointer;
+          height: 24px;
+          width: 24px;
+          fill: white;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
