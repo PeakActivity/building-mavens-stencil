@@ -8,10 +8,10 @@
     />
   </div>
   <ul class="mavens-nav-items">
-    <li class="mavens-nav-item"><a href="/mavens-about-us">About</a></li>
-    <li class="mavens-nav-item"><a href="/mavens-services">Services</a></li>
-    <li class="mavens-nav-item"><a href="/mavens-projects">Projects</a></li>
-    <li class="mavens-nav-item"><a href="'/mavens-blogs">Blogs</a></li>
-    <li class="mavens-nav-item"><a href="'/mavens-contact">Contact</a></li>
+    {{#each pages}}
+    <li class="mavens-nav-item">
+      <a href="{{url}}" aria-label="{{name}}">{{name}}</a>
+    </li>
+    {{/each}}
   </ul>
 </nav>
