@@ -1,0 +1,14 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {
+      "mavens-home": "/home/",
+      "mavens-about-us": "/about-us/",
+      "mavens-services": "/services/"
+    },
+    "product": {}
+  },
+  "normalStoreUrl": "https://building-mavens.mybigcommerce.com",
+  "port": 3000
+}

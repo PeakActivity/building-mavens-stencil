@@ -1,0 +1,71 @@
+<style>
+    .mavens-hero {
+        text-align: left;
+    }
+
+    .mavens-hero .mavens-heading {
+        font-size: 12vw;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .mavens-hero .mavens-heading span {
+        display: block;
+    }
+
+    @media (min-width: 1375px) {
+        .mavens-hero .mavens-heading {
+            font-size: 165px;
+        }
+    }
+
+    .mavens-sub-row {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        .mavens-sub-row {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .mavens-sub-text {
+        flex: 1;
+        text-align: left;
+        padding-right: 2em;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+
+    .mavens__cta__hero {
+        flex: 1;
+        color: white;
+        background-color: white;
+    }
+</style>
+
+<div class="mavens__max__width__container">
+    <section>
+        <div class="mavens-hero">
+            <h1 class="mavens-heading">
+                {{{title}}}
+            </h1>
+            <div class="mavens-sub-row">
+                <div class="mavens-sub-text">
+                    {{{content}}}
+                </div>
+                <div class="mavens__cta__hero">
+                    <svg>
+                        <use xlink:href="#icon-mavens-cta" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
