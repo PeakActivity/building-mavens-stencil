@@ -1,3 +1,10 @@
+$breakpoint-xs: 320px; // Extra small devices
+$breakpoint-sm: 576px; // Small devices
+$breakpoint-md: 768px; // Medium devices
+$breakpoint-lg: 992px; // Large devices
+$breakpoint-xl: 1200px; // Extra large devices
+$max-width: 1440px;
+
 .mavens__services__header {
   h1,
   h2 {
@@ -10,5 +17,183 @@
 
   h2 {
     font-size: 20px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    h1 {
+      font-size: 80px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      flex: 1;
+      align-self: flex-start;
+      margin-top: 0;
+    }
+
+    h2 {
+      flex: 1;
+    }
+  }
+}
+
+.service-image-row {
+  overflow: hidden;
+  max-width: 100vw;
+
+  .mobile {
+    background: linear-gradient(to bottom, #00308c 90%, white 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    margin-top: 80px;
+  }
+
+  .desktop {
+    background: linear-gradient(to bottom, #00308c 50%, white 50%);
+    display: none;
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-width: 480px;
+      flex-grow: 0;
+    }
+    margin-top: 150px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: flex;
+    }
+  }
+}
+
+.get__in__touch__section {
+  background-color: white;
+  padding-bottom: 56px;
+  border-bottom: 1px solid #ded9c6;
+
+  h1,
+  p {
+    margin: 0;
+    color: black;
+  }
+  h1 {
+    padding-top: 80px;
+    padding-bottom: 56px;
+    font-size: 48px;
+  }
+  p {
+    font-size: 18px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .get__in__touch__text {
+      padding-top: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 210px;
+      h1,
+      p {
+        padding: 0;
+      }
+      // give each child flex 1
+      h1 {
+        flex: 1;
+      }
+      div {
+        flex: 1.47;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 26px;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.mavens__services__section {
+  padding-top: 80px;
+  padding-bottom: 173px;
+  h1,
+  p {
+    margin: 0;
+    color: black;
+  }
+  h1 {
+    font-size: 48px;
+    padding-top: 21px;
+    padding-bottom: 47px;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  .services__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+    .services__card {
+      border-top: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px 0px;
+
+      h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .service__text__container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .services__container {
+      .services__card {
+        .service__text__container {
+          flex-direction: row;
+          align-items: center;
+          h2 {
+            font-size: 80px;
+          }
+          .header__container {
+            flex: 1;
+          }
+          .subtext__container {
+            flex: 0.4;
+          }
+        }
+      }
+    }
   }
 }
