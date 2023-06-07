@@ -5,25 +5,6 @@ $breakpoint-lg: 992px; // Large devices
 $breakpoint-xl: 1200px; // Extra large devices
 $max-width: 1440px;
 
-.mavens-about-hero {
-  text-align: left;
-  flex-direction: column;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
-  .mavens-heading {
-    font-size: 80px;
-    color: white;
-    font-weight: bold;
-    margin: 0;
-
-    @media (max-width: $breakpoint-md) {
-      font-size: 60px;
-    }
-  }
-}
-
 .mavens__split__image {
   background: linear-gradient(to bottom, #00308c 50%, white 50%);
   display: flex;
