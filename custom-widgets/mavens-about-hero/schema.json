@@ -1,0 +1,19 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Sample Text",
+        "settings": [
+          {
+            "type": "input",
+            "id": "content",
+            "label": "Content",
+            "default": "I am a sample text"
+          }
+        ]
+      }
+    ]
+  }
+]
