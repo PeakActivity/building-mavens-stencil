@@ -1,0 +1,58 @@
+<style>
+    .mavens__hero__video {
+        margin-top: 3em;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+    }
+
+    .mavens__hero__video #player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<script>
+    var tag = document.createElement('script');
+  
+    tag.src = '{{url}}';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '1080',
+        width: '1920',
+        videoId: 'svNwCxJkNyc',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          loop: 1,
+          fs: 0,
+          cc_load_policy: 0,
+          iv_load_policy: 3,
+          autohide: 0,
+          playlist: 'svNwCxJkNyc',
+        },
+        events: {
+          onReady: onPlayerReady,
+        },
+      });
+    }
+  
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+  </script>
+
+<div class="mavens__hero__video">
+    <div id="player"></div>
+</div>

@@ -1,0 +1,19 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Video Hero",
+        "settings": [
+          {
+            "type": "input",
+            "id": "url",
+            "label": "Youtube URL",
+            "default": "https://www.youtube.com/iframe_api"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "About Us",
+        "settings": [
+          {
+            "type": "input",
+            "id": "aboutus-title",
+            "label": "About Us - Title",
+            "default": "Experts In Structural Engineering And Assessments"
+          },
+          {
+            "type": "text",
+            "id": "aboutus-content",
+            "label": "About Us - Content",
+            "default": "Building Mavens is your source for dependable engineering services. Our team of professionals specializes in milestone inspections among other engineering assistance. Located in Palm Beach Gardens, we service clients across Florida."
+          },
+          {
+            "type": "input",
+            "id": "aboutus-CTA-title",
+            "label": "About Us - CTA Title",
+            "default": "lorem ipsum"
+          },
+          {
+            "type": "input",
+            "id": "aboutus-CTA-URL",
+            "label": "About Us - CTA URL",
+            "default": "https://www.w3docs.com/"
+          }
+        ]
+      },
+      {
+        "label": "Services",
+        "settings": [
+          {
+            "type": "input",
+            "id": "services-title",
+            "label": "Services - Title",
+            "default": "What We Specialize In"
+          },
+          {
+            "type": "text",
+            "id": "services-subtitle",
+            "label": "Services - Sub Title",
+            "default": "Our company offers the following specialty engineering services:"
+          },
+          {
+            "type": "input",
+            "id": "services-one",
+            "label": "Expert Witness and Construction Litigation Support",
+            "default": "What We Specialize In"
+          },
+          {
+            "type": "input",
+            "id": "services-two",
+            "label": "Services - List Item 2",
+            "default": "Owner Representation"
+          },
+          {
+            "type": "input",
+            "id": "services-three",
+            "label": "Services - List Item 3",
+            "default": "Condominium Turnover and Property Condition Assessments"
+          },
+          {
+            "type": "input",
+            "id": "services-CTA-text",
+            "label": "Services - List Item 3",
+            "default": "View all services"
+          },
+          {
+            "type": "input",
+            "id": "services-CTA-URL",
+            "label": "Services - List Item 3",
+            "default": "https://www.w3docs.com/"
+          }
+        ]
+      }
+    ]
+  }
+]
