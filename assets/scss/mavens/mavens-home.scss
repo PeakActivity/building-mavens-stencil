@@ -5,14 +5,32 @@ $breakpoint-lg: 992px; // Large devices
 $breakpoint-xl: 1200px; // Extra large devices
 $max-width: 1440px;
 
-@function rotate-clockwise($angle) {
+@function rotate-icon($angle) {
   $angle: $angle + 20deg;
   @return rotate($angle);
 }
 
 @keyframes rotate-animation {
   100% {
-    transform: rotate-clockwise(25deg);
+    transform: rotate-icon(25deg);
+  }
+}
+
+@keyframes rotateCTAClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCTACounterClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
@@ -70,9 +88,66 @@ $max-width: 1440px;
 }
 
 .mavens__cta__hero {
-  flex: 1;
-  color: white;
-  background-color: white;
+  display: flex;
+  flex: 0;
+  align-items: center;
+  justify-content: flex-start;
+  height: 200px;
+  background-color: #00308c !important;
+
+  .circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+
+    .circle-image {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .circle-text-image {
+      animation: in 12s linear 0s infinite normal;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px; /* Adjust the size as needed */
+      height: 50px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .reverse-wrapper {
+      position: absolute;
+      animation: in 6s linear 0s infinite reverse;
+      animation-play-state: paused;
+      max-width: 95%;
+      max-height: 95%;
+      left: 5px;
+      top: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .arrow-icon {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      .reverse-wrapper {
+        animation-play-state: running;
+      }
+    }
+  }
+  @keyframes in {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 .mavens__services__section {
@@ -149,23 +224,42 @@ $max-width: 1440px;
         align-items: flex-start;
         align-self: flex-start;
         margin-left: 10px;
+        margin-top: 0;
 
-        h3 {
-          color: black;
-          font-size: 32px;
-          margin: 0;
-          line-height: 1;
-        }
-
-        .icon {
-          align-self: flex-start;
-          font-size: 48px;
+        .services-arrow-icon {
+          border-radius: 50%;
+          transition: all 0.1s linear;
+          background-color: transparent;
+          color: #00308c;
         }
       }
 
       @media (min-width: $breakpoint-md) {
         flex-direction: row;
         align-items: center;
+        &:hover {
+          h3 {
+            color: #b58f47;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            transition: all 0.1s ease-in-out;
+            cursor: pointer;
+          }
+          .services-arrow-icon {
+            color: white;
+            animation: rotate-animation 0.1s linear forwards;
+            transition: all 0.1s linear;
+            background-color: #b58f47;
+            color: white;
+          }
+        }
+        h3 {
+          color: black;
+          font-size: 32px;
+          margin: 0;
+          line-height: 1;
+          transition: all 0.1s ease-in-out;
+        }
 
         .mavens__service__text__container {
           display: flex;
