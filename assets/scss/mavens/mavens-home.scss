@@ -40,13 +40,7 @@ $max-width: 1440px;
 }
 
 .mavens__max__width__container {
-  max-width: $max-width;
-  margin: 0 auto;
   padding: 0px 30px;
-
-  @media (min-width: $breakpoint-md) {
-    padding: 0px 70px;
-  }
 }
 
 // .mavens-hero {
@@ -87,322 +81,322 @@ $max-width: 1440px;
 //   font-size: 26px;
 // }
 
-.mavens__cta__hero {
-  display: flex;
-  flex: 0;
-  align-items: center;
-  justify-content: flex-start;
-  height: 200px;
-  background-color: #00308c !important;
+// .mavens__cta__hero {
+//   display: flex;
+//   flex: 0;
+//   align-items: center;
+//   justify-content: flex-start;
+//   height: 200px;
+//   background-color: #00308c !important;
 
-  .circle {
-    position: relative;
-    height: 200px;
-    width: 200px;
+//   .circle {
+//     position: relative;
+//     height: 200px;
+//     width: 200px;
 
-    .circle-image {
-      position: absolute;
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .circle-text-image {
-      animation: in 12s linear 0s infinite normal;
-    }
+//     .circle-image {
+//       position: absolute;
+//       max-width: 100%;
+//       max-height: 100%;
+//       object-fit: contain;
+//     }
+//     .circle-text-image {
+//       animation: in 12s linear 0s infinite normal;
+//     }
 
-    .arrow-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px; /* Adjust the size as needed */
-      height: 50px;
-      transition: transform 0.3s ease-in-out;
-    }
+//     .arrow-icon {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       width: 50px; /* Adjust the size as needed */
+//       height: 50px;
+//       transition: transform 0.3s ease-in-out;
+//     }
 
-    .reverse-wrapper {
-      position: absolute;
-      animation: in 6s linear 0s infinite reverse;
-      animation-play-state: paused;
-      max-width: 95%;
-      max-height: 95%;
-      left: 5px;
-      top: 5px;
-    }
+//     .reverse-wrapper {
+//       position: absolute;
+//       animation: in 6s linear 0s infinite reverse;
+//       animation-play-state: paused;
+//       max-width: 95%;
+//       max-height: 95%;
+//       left: 5px;
+//       top: 5px;
+//     }
 
-    &:hover {
-      cursor: pointer;
-      .arrow-icon {
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-      .reverse-wrapper {
-        animation-play-state: running;
-      }
-    }
-  }
-  @keyframes in {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
+//     &:hover {
+//       cursor: pointer;
+//       .arrow-icon {
+//         transform: translate(-50%, -50%) rotate(45deg);
+//       }
+//       .reverse-wrapper {
+//         animation-play-state: running;
+//       }
+//     }
+//   }
+//   @keyframes in {
+//     from {
+//       transform: rotate(0deg);
+//     }
+//     to {
+//       transform: rotate(360deg);
+//     }
+//   }
+// }
 
 
-.mavens__services__section {
-  background-color: white;
-  color: black;
-  padding: 80px 0px;
-  border-bottom: 1px solid #d1cac7;
-  h2 {
-    color: black;
-    font-size: 50px;
-    margin-top: 2rem;
-    line-height: 1;
-    margin-bottom: 2rem;
-  }
+// .mavens__services__section {
+//   background-color: white;
+//   color: black;
+//   padding: 80px 0px;
+//   border-bottom: 1px solid #d1cac7;
+//   h2 {
+//     color: black;
+//     font-size: 50px;
+//     margin-top: 2rem;
+//     line-height: 1;
+//     margin-bottom: 2rem;
+//   }
 
-  @media (min-width: $breakpoint-md) {
-    padding: 140px 0px;
-    h2 {
-      font-size: 64px;
-    }
-    .mavens__services__header {
-      padding-bottom: 140px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      h2 {
-        font-size: 62px;
-      }
-      h3 {
-        font-size: 32px;
-      }
-    }
-  }
+//   @media (min-width: $breakpoint-md) {
+//     padding: 140px 0px;
+//     h2 {
+//       font-size: 64px;
+//     }
+//     .mavens__services__header {
+//       padding-bottom: 140px;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: flex-start;
+//       justify-content: flex-start;
+//       h2 {
+//         font-size: 62px;
+//       }
+//       h3 {
+//         font-size: 32px;
+//       }
+//     }
+//   }
 
-  .mavens__services__header {
-    padding-bottom: 80px;
-  }
+//   .mavens__services__header {
+//     padding-bottom: 80px;
+//   }
 
-  .mavens__services__container {
-    background-color: white;
-    border-bottom: 1px solid #d1cac7;
+//   .mavens__services__container {
+//     background-color: white;
+//     border-bottom: 1px solid #d1cac7;
 
-    > div:last-child {
-      padding: 80px 0px;
-    }
+//     > div:last-child {
+//       padding: 80px 0px;
+//     }
 
-    .mavens__service__card {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 40px;
-      border-top: 1px solid #000;
-      padding-top: 40px;
+//     .mavens__service__card {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       margin-top: 40px;
+//       border-top: 1px solid #000;
+//       padding-top: 40px;
 
-      &:first-child {
-        margin-top: 0;
-        border-top: none;
-        padding-top: 0;
-      }
+//       &:first-child {
+//         margin-top: 0;
+//         border-top: none;
+//         padding-top: 0;
+//       }
 
-      &:last-child {
-        padding-bottom: 80px;
-      }
+//       &:last-child {
+//         padding-bottom: 80px;
+//       }
 
-      .mavens__pill {
-        align-self: flex-start;
-        margin-bottom: 10px;
-        margin-left: 8px;
-      }
+//       .mavens__pill {
+//         align-self: flex-start;
+//         margin-bottom: 10px;
+//         margin-left: 8px;
+//       }
 
-      div {
-        display: flex;
-        align-items: flex-start;
-        align-self: flex-start;
-        margin-left: 10px;
-        margin-top: 0;
+//       div {
+//         display: flex;
+//         align-items: flex-start;
+//         align-self: flex-start;
+//         margin-left: 10px;
+//         margin-top: 0;
 
-        .services-arrow-icon {
-          border-radius: 50%;
-          transition: all 0.1s linear;
-          background-color: transparent;
-          color: #00308c;
-        }
-      }
+//         .services-arrow-icon {
+//           border-radius: 50%;
+//           transition: all 0.1s linear;
+//           background-color: transparent;
+//           color: #00308c;
+//         }
+//       }
 
-      @media (min-width: $breakpoint-md) {
-        flex-direction: row;
-        align-items: center;
-        &:hover {
-          h3 {
-            color: #b58f47;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            transition: all 0.1s ease-in-out;
-            cursor: pointer;
-          }
-          .services-arrow-icon {
-            color: white;
-            animation: rotate-animation 0.1s linear forwards;
-            transition: all 0.1s linear;
-            background-color: #b58f47;
-            color: white;
-          }
-        }
-        h3 {
-          color: black;
-          font-size: 32px;
-          margin: 0;
-          line-height: 1;
-          transition: all 0.1s ease-in-out;
-        }
+//       @media (min-width: $breakpoint-md) {
+//         flex-direction: row;
+//         align-items: center;
+//         &:hover {
+//           h3 {
+//             color: #b58f47;
+//             margin-top: 10px;
+//             margin-bottom: 20px;
+//             transition: all 0.1s ease-in-out;
+//             cursor: pointer;
+//           }
+//           .services-arrow-icon {
+//             color: white;
+//             animation: rotate-animation 0.1s linear forwards;
+//             transition: all 0.1s linear;
+//             background-color: #b58f47;
+//             color: white;
+//           }
+//         }
+//         h3 {
+//           color: black;
+//           font-size: 32px;
+//           margin: 0;
+//           line-height: 1;
+//           transition: all 0.1s ease-in-out;
+//         }
 
-        .mavens__service__text__container {
-          display: flex;
-          justify-content: space-between;
-          flex-grow: 1;
-        }
+//         .mavens__service__text__container {
+//           display: flex;
+//           justify-content: space-between;
+//           flex-grow: 1;
+//         }
 
-        .mavens__pill {
-          margin-right: 40px;
-          margin-bottom: 0;
-          margin-top: 8px;
-        }
+//         .mavens__pill {
+//           margin-right: 40px;
+//           margin-bottom: 0;
+//           margin-top: 8px;
+//         }
 
-        div {
-          align-items: center;
+//         div {
+//           align-items: center;
 
-          h3 {
-            margin: 0;
-            font-size: 83px;
-          }
-        }
-      }
-    }
-  }
-}
+//           h3 {
+//             margin: 0;
+//             font-size: 83px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-.mavens__about__section {
-  background-color: white;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  padding: 80px 0px;
-  border-bottom: 1px solid #d1cac7;
+// .mavens__about__section {
+//   background-color: white;
+//   color: black;
+//   display: flex;
+//   flex-direction: column;
+//   font-size: 20px;
+//   padding: 80px 0px;
+//   border-bottom: 1px solid #d1cac7;
 
-  .left {
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex: 1;
-    text-align: left;
-    margin-bottom: 2rem;
-  }
+//   .left {
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//     flex: 1;
+//     text-align: left;
+//     margin-bottom: 2rem;
+//   }
 
-  .right {
-    flex: 3; /* Adjust the flex value to distribute the space evenly */
-    h2 {
-      color: black;
-      font-size: 50px;
-      margin: 0;
-      line-height: 1;
-      margin-bottom: 2rem;
-    }
-  }
+//   .right {
+//     flex: 3; /* Adjust the flex value to distribute the space evenly */
+//     h2 {
+//       color: black;
+//       font-size: 50px;
+//       margin: 0;
+//       line-height: 1;
+//       margin-bottom: 2rem;
+//     }
+//   }
 
-  @media (min-width: $breakpoint-md) {
-    flex-direction: row;
-    padding: 140px 0px;
-    .left {
-      margin-bottom: 0;
-      margin-top: 0;
-    }
-    .right {
-      margin-bottom: 0;
-      h2 {
-        font-size: 64px;
-      }
-    }
-  }
-}
+//   @media (min-width: $breakpoint-md) {
+//     flex-direction: row;
+//     padding: 140px 0px;
+//     .left {
+//       margin-bottom: 0;
+//       margin-top: 0;
+//     }
+//     .right {
+//       margin-bottom: 0;
+//       h2 {
+//         font-size: 64px;
+//       }
+//     }
+//   }
+// }
 
-.mavens__services__container {
-  background-color: white;
+// .mavens__services__container {
+//   background-color: white;
 
-  .mavens__service__card {
-    display: flex;
-    flex-direction: column;
+//   .mavens__service__card {
+//     display: flex;
+//     flex-direction: column;
 
-    border-top: 1px solid #000;
-    padding-top: 40px;
+//     border-top: 1px solid #000;
+//     padding-top: 40px;
 
-    &:first-child {
-      margin-top: 0;
-      border-top: none;
-      padding-top: 0;
-    }
+//     &:first-child {
+//       margin-top: 0;
+//       border-top: none;
+//       padding-top: 0;
+//     }
 
-    &:last-child {
-      padding-bottom: 40px;
-    }
+//     &:last-child {
+//       padding-bottom: 40px;
+//     }
 
-    .mavens__pill {
-      align-self: flex-start;
-      margin-bottom: 10px;
-      margin-left: 8px;
-    }
+//     .mavens__pill {
+//       align-self: flex-start;
+//       margin-bottom: 10px;
+//       margin-left: 8px;
+//     }
 
-    div {
-      display: flex;
-      align-items: flex-start;
-      align-self: flex-start;
-      margin-left: 10px;
+//     div {
+//       display: flex;
+//       align-items: flex-start;
+//       align-self: flex-start;
+//       margin-left: 10px;
 
-      h3 {
-        color: black;
-        font-size: 32px;
-        margin: 0;
-        line-height: 1;
-      }
+//       h3 {
+//         color: black;
+//         font-size: 32px;
+//         margin: 0;
+//         line-height: 1;
+//       }
 
-      .icon {
-        align-self: flex-start;
-        font-size: 48px;
-      }
-    }
+//       .icon {
+//         align-self: flex-start;
+//         font-size: 48px;
+//       }
+//     }
 
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
-      align-items: center;
+//     @media (min-width: $breakpoint-md) {
+//       flex-direction: row;
+//       align-items: center;
 
-      .mavens__service__text__container {
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-      }
+//       .mavens__service__text__container {
+//         display: flex;
+//         justify-content: space-between;
+//         flex-grow: 1;
+//       }
 
-      .mavens__pill {
-        margin-right: 40px;
-        margin-bottom: 0;
-        margin-top: 8px;
-      }
+//       .mavens__pill {
+//         margin-right: 40px;
+//         margin-bottom: 0;
+//         margin-top: 8px;
+//       }
 
-      div {
-        align-items: center;
+//       div {
+//         align-items: center;
 
-        h3 {
-          margin: 0;
-          font-size: 64px;
-        }
-      }
-    }
-  }
-}
+//         h3 {
+//           margin: 0;
+//           font-size: 64px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .mavens__pill {
   flex: 0;
@@ -482,32 +476,32 @@ $max-width: 1440px;
   grid-area: 2 / 1 / 3 / 2;
 }
 
-.mavens__services {
-  color: black;
-  display: flex;
-  align-items: flex-start;
-  .icon-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .icon {
-      font-size: 2em;
-      height: 2em;
-      width: 2em;
-    }
-  }
-  .middle {
-    height: 100%;
-    flex-grow: 1;
-    h2 {
-      margin: 0;
-      line-height: 1;
-      font-size: 4em;
-      color: black;
-    }
-  }
-}
+// .mavens__services {
+//   color: black;
+//   display: flex;
+//   align-items: flex-start;
+//   .icon-container {
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     .icon {
+//       font-size: 2em;
+//       height: 2em;
+//       width: 2em;
+//     }
+//   }
+//   .middle {
+//     height: 100%;
+//     flex-grow: 1;
+//     h2 {
+//       margin: 0;
+//       line-height: 1;
+//       font-size: 4em;
+//       color: black;
+//     }
+//   }
+// }
 
 .div3 {
   grid-area: 3 / 1 / 4 / 2;
