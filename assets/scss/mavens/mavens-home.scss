@@ -547,6 +547,20 @@ $max-width: 1440px;
     justify-content: space-around;
     flex-grow: 1;
     width: 100%;
+
+    .mavens__grid__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:first-child {
+        align-items: baseline;
+      }
+
+      &:last-child {
+        align-items: flex-end;
+      }
+    }
   }
 
   // Styles for larger screens
