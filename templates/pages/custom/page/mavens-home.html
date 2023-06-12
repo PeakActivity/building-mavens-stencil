@@ -1,3 +1,9 @@
+---
+blog:
+    recent_posts:
+        limit: 3
+---
+
 {{#partial "head"}}
 
 {{/partial}} {{#partial "page"}}
@@ -85,70 +91,36 @@
           </h3>
         </div>
 
-        <div class="mavens__blog__card">
-          <div>
-            <img
-              src="https://picsum.photos/619/443"
-              class="mavens__project__image"
-            />
-          </div>
-          <div class="mavens__blog__title__container">
-            <h4 class="mavens__blog__title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              nisi nemo ut eos hic dolore ipsam exercitationem. Cum odio
-              voluptatem fugiat, placeat dicta nihil obcaecati cumque illum,
-              pariatur, laudantium reiciendis?
-            </h4>
-            <div class="mavens__blog__info">
-              <p class="category">Marketing</p>
-              <p class="date">October 23rd, 2023</p>
+        {{#each blog.recent_posts}}
+          <div class="mavens__blog__card">
+            <div>
+              <img
+              src="{{getImage thumbnail 'gallery_size'}}" 
+              alt="{{thumbnail.alt}}"
+                class="mavens__project__image"
+              />
+            </div>
+            <div class="mavens__blog__title__container">
+              <h4 class="mavens__blog__title">
+                {{summary}}
+              </h4>
+              <div class="mavens__blog__info">
+                {{#if tags}}
+                  {{#each tags}}
+                    <p class="category">{{name}}</p>
+                  {{/each}}
+                {{/if}}
+                <p class="date">{{date_published}}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mavens__blog__card">
-          <div>
-            <img
-              src="https://picsum.photos/619/443"
-              class="mavens__project__image"
-            />
-          </div>
-          <div class="mavens__blog__title__container">
-            <h4 class="mavens__blog__title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              nisi nemo ut eos hic dolore ipsam exercitationem. Cum odio
-              voluptatem fugiat, placeat dicta nihil obcaecati cumque illum,
-              pariatur, laudantium reiciendis?
-            </h4>
-            <div class="mavens__blog__info">
-              <p class="category">Marketing</p>
-              <p class="date">October 23rd, 2023</p>
-            </div>
-          </div>
-        </div>
-        <div class="mavens__blog__card">
-          <div>
-            <img
-              src="https://picsum.photos/619/443"
-              class="mavens__project__image"
-            />
-          </div>
-          <div class="mavens__blog__title__container">
-            <h4 class="mavens__blog__title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              nisi nemo ut eos hic dolore ipsam exercitationem. Cum odio
-              voluptatem fugiat, placeat dicta nihil obcaecati cumque illum,
-              pariatur, laudantium reiciendis?
-            </h4>
-            <div class="mavens__blog__info">
-              <p class="category">Marketing</p>
-              <p class="date">October 23rd, 2023</p>
-            </div>
-          </div>
-        </div>
+        {{/each}}
         <div>
-          <button class="mavens__pill white">
-            <span>View All Blogs</span>
-          </button>
+          <form action="/blog/">
+            <button class="mavens__pill white">
+              <span>View All Blogs</span>
+            </button>
+          </form>
         </div>
       </div>
     </div>
