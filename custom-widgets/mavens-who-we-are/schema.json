@@ -4,138 +4,79 @@
     "label": "Design",
     "sections": [
       {
-        "label": "Sample Text",
+        "label": "Who We Are",
         "settings": [
           {
             "type": "input",
-            "id": "content",
+            "id": "whoWeAre-title",
+            "label": "Title",
+            "default": "Experts In Structural Engineering And Assessments"
+          },
+          {
+            "type": "text",
+            "id": "whoWeAre-content",
             "label": "Content",
-            "default": "I am a sample text"
+            "default": "Building Mavens is your source for dependable engineering services. Our team of professionals specializes in milestone inspections among other engineering assistance. Located in Palm Beach Gardens, we service clients across Florida."
           },
           {
             "type": "input",
-            "id": "color",
-            "label": "Text Color",
-            "default": "#FFFFFF"
+            "id": "whoWeAre-CTA-title",
+            "label": "CTA Title",
+            "default": "lorem ipsum"
           },
           {
             "type": "input",
-            "id": "background_color",
-            "label": "Background Color",
-            "default": "#3C1F8C"
+            "id": "whoWeAre-CTA-URL",
+            "label": "CTA URL",
+            "default": "https://www.w3docs.com/"
           },
           {
-            "type": "number",
-            "id": "font_size",
-            "label": "Font Size",
-            "default": {
-              "value": 24,
-              "type": "px"
-            }
+            "type": "input",
+            "id": "whoWeAre-sectionOne-title",
+            "label": "Section One Title",
+            "default": "10+"
           },
           {
-            "type": "select",
-            "id": "font_weight",
-            "label": "Font Weight",
-            "default": "500",
-            "typeMeta": {
-              "selectOptions": [
-                {
-                  "label": "Thin",
-                  "value": "100"
-                },
-                {
-                  "label": "Extra Light (Ultra Light)",
-                  "value": "200"
-                },
-                {
-                  "label": "Light",
-                  "value": "300"
-                },
-                {
-                  "label": "Normal",
-                  "value": "400"
-                },
-                {
-                  "label": "Medium",
-                  "value": "500"
-                },
-                {
-                  "label": "Semi Bold (Demi Bold)",
-                  "value": "600"
-                },
-                {
-                  "label": "Bold",
-                  "value": "700"
-                },
-                {
-                  "label": "Extra Bold (Ultra Bold)",
-                  "value": "800"
-                },
-                {
-                  "label": "Black (Heavy)",
-                  "value": "900"
-                }
-              ]
-            }
+            "type": "input",
+            "id": "whoWeAre-sectionOne-text",
+            "label": "Section One Text",
+            "default": "Years of Experience"
           },
           {
-            "type": "alignment",
-            "label": "Text Alignment",
-            "id": "text_align",
-            "default": {
-              "horizontal": "center",
-              "vertical": "middle"
-            },
-            "typeMeta": {
-              "display": "horizontal"
-            }
+            "type": "input",
+            "id": "whoWeAre-sectionTwo-title",
+            "label": "Section One Title",
+            "default": "150+"
           },
           {
-            "type": "boxModel",
-            "label": "Margin",
-            "id": "margin",
-            "default": {
-              "top": {
-                "value": "0",
-                "type": "px"
-              },
-              "right": {
-                "value": "0",
-                "type": "px"
-              },
-              "bottom": {
-                "value": "0",
-                "type": "px"
-              },
-              "left": {
-                "value": "0",
-                "type": "px"
-              }
-            }
+            "type": "input",
+            "id": "whoWeAre-sectionTwo-text",
+            "label": "Section One Text",
+            "default": "Satisfied Customers"
           },
           {
-            "type": "boxModel",
-            "label": "Padding",
-            "id": "padding",
-            "default": {
-              "top": {
-                "value": "8",
-                "type": "px"
-              },
-              "right": {
-                "value": "24",
-                "type": "px"
-              },
-              "bottom": {
-                "value": "8",
-                "type": "px"
-              },
-              "left": {
-                "value": "24",
-                "type": "px"
-              }
-            }
+            "type": "input",
+            "id": "whoWeAre-sectionThree-title",
+            "label": "Section One Title",
+            "default": "10+"
+          },
+          {
+            "type": "input",
+            "id": "whoWeAre-sectionThree-text",
+            "label": "Section One Text",
+            "default": "Awards Won"
+          },
+          {
+            "type": "input",
+            "id": "whoWeAre-sectionFour-title",
+            "label": "Section One Title",
+            "default": "200+"
+          },
+          {
+            "type": "input",
+            "id": "whoWeAre-sectionFour-text",
+            "label": "Section One Text",
+            "default": "Completed Projects"
           }
         ]
       }

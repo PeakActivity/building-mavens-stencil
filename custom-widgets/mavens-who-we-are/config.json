@@ -1,37 +1,14 @@
-[
-  {
-    "type": "tab",
-    "label": "Design",
-    "sections": [
-      {
-        "label": "About Us",
-        "settings": [
-          {
-            "type": "input",
-            "id": "aboutus-title",
-            "label": "About Us - Title",
-            "default": "Experts In Structural Engineering And Assessments"
-          },
-          {
-            "type": "text",
-            "id": "aboutus-content",
-            "label": "About Us - Content",
-            "default": "Building Mavens is your source for dependable engineering services. Our team of professionals specializes in milestone inspections among other engineering assistance. Located in Palm Beach Gardens, we service clients across Florida."
-          },
-          {
-            "type": "input",
-            "id": "aboutus-CTA-title",
-            "label": "About Us - CTA Title",
-            "default": "lorem ipsum"
-          },
-          {
-            "type": "input",
-            "id": "aboutus-CTA-URL",
-            "label": "About Us - CTA URL",
-            "default": "https://www.w3docs.com/"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "whoWeAre-title": "Experts In Structural Engineering And Assessments",
+  "whoWeAre-content": "Building Mavens is your source for dependable engineering services. Our team of professionals specializes in milestone inspections among other engineering assistance. Located in Palm Beach Gardens, we service clients across Florida.",
+  "whoWeAre-CTA-title": "lorem ipsum",
+  "whoWeAre-CTA-URL": "https://www.w3docs.com/",
+  "whoWeAre-sectionOne-title": "10+",
+  "whoWeAre-sectionOne-text": "Years of Experience",
+  "whoWeAre-sectionTwo-title": "150+",
+  "whoWeAre-sectionTwo-text": "Satisfied Customers",
+  "whoWeAre-sectionThree-title": "10+",
+  "whoWeAre-sectionThree-text": "Awards Won",
+  "whoWeAre-sectionFour-title": "200+",
+  "whoWeAre-sectionFour-text": "Completed Projects"
+}

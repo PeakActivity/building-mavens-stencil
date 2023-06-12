@@ -1,5 +1,55 @@
+$breakpoint-xs: 320px; // Extra small devices
+$breakpoint-sm: 576px; // Small devices
+$breakpoint-md: 768px; // Medium devices
+$breakpoint-lg: 992px; // Large devices
+$breakpoint-xl: 1200px; // Extra large devices
+$max-width: 1440px;
+
 .mavens__max__width__container {
   max-width: $max-width;
   margin: 0 auto;
   width: 100%;
+}
+
+.mavens__pill {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 4px 14px;
+  border-radius: 40px;
+  border: solid 1px #00308c;
+  flex-grow: 0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  color: #00308c;
+
+  &.brown {
+    border: solid 1px #b58f47;
+    color: #b58f47;
+  }
+  &.white {
+    border: solid 1px white;
+    color: white;
+  }
+
+  &:hover {
+    .icon {
+      animation: rotate-animation 0.1s linear forwards;
+      margin-left: 10px;
+      transition: all 0.1s linear;
+      background-color: #b58f47;
+      color: white;
+    }
+  }
+
+  .icon {
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 1.5em;
+    border-radius: 50%;
+    color: currentColor;
+  }
 }
