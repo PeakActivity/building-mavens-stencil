@@ -1,34 +1,35 @@
 ---
 blog:
-    posts:
-        limit: 5
-        pages: 3
-        summary: 200
+  posts:
+    limit: 5
+    pages: 3
+    summary: 200
 ---
-{{#partial "head"}}
-    {{#if pagination.blog.previous}}
-        <link rel="prev" href="{{pagination.blog.previous}}">
-    {{/if}}
-    {{#if pagination.blog.next}}
-        <link rel="next" href="{{pagination.blog.next}}">
-    {{/if}}
-{{/partial}}
 
-{{#partial "page"}}
+{{#partial "head"}} {{#if pagination.blog.previous}}
+<link rel="prev" href="{{pagination.blog.previous}}" />
+{{/if}} {{#if pagination.blog.next}}
+<link rel="next" href="{{pagination.blog.next}}" />
+{{/if}} {{/partial}} {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<section>
+  <div class="mavens__max__width__container">
+    <h1 class="blog-page-header">
+      Lorem ipsum dolor sit amet consectetur. Nisi molestie nulla eleifend.
+    </h1>
+  </div>
+  <!-- {{#unless theme_settings.hide_blog_page_heading }}
+  <h1 class="page-heading">{{ blog.name }}</h1>
+  {{/unless}} -->
+  <div class="mavens-blog-list-container">
+    <div class="mavens__max__width__container">
+      {{#each blog.posts}} {{> components/mavens/blog-post-card post=this
+      theme_settings=../theme_settings}}
 
-<section class="page">
-    {{#unless theme_settings.hide_blog_page_heading }}
-        <h1 class="page-heading">{{ blog.name }}</h1>
-    {{/unless}}
-
-    {{#each blog.posts}}
-        {{> components/blog/post post=this theme_settings=../theme_settings}}
-    {{/each}}
-
-    {{> components/common/paginator pagination.blog}}
+      <!-- {{> components/blog/post post=this theme_settings=../theme_settings}} -->
+      {{/each}} {{> components/common/paginator pagination.blog}}
+    </div>
+  </div>
 </section>
 
-{{/partial}}
-{{> layout/base}}
+{{/partial}} {{> layout/base}}

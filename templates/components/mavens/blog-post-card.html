@@ -1,0 +1,53 @@
+<article class="mavens-blog-card">
+    <div class="mavens-blog-thumbnail">
+        {{#if post.thumbnail}}
+            <figure>
+                <a href="{{post.url}}">
+                    {{> components/common/responsive-img
+                        image=post.thumbnail
+                        fallback_size=theme_settings.blog_size
+                        lazyload=theme_settings.lazyload_mode
+                    }}
+                </a>
+            </figure>
+        {{/if}}
+    </div>
+
+    <div class="mavens-blog-details">
+        <header>
+            <h{{#if is_blog_post}}1{{else}}2{{/if}}>
+                <a class="mavens-blog-title" href="{{post.url}}">{{post.title}}</a>
+            </h{{#if is_blog_post}}1{{else}}2{{/if}}>
+        </header>
+
+        <div class="mavens-blog-subtext">
+            {{#if post.body}}
+                {{{post.body}}}
+            {{else}}
+                {{{post.summary}}}
+                {{#if post.show_read_more}}
+                    &hellip; <a href="{{url}}" aria-label="{{post.title}} {{lang 'blog.read_more'}}">{{lang 'blog.read_more'}}</a>
+                {{/if}}
+            {{/if}}
+        </div>
+
+
+       <div class="mavens-date-tags">
+            {{#if post.tags}}
+                <ul class="mavens-tag-list">
+                    {{#each post.tags}}
+                    <li class="mavens-tag-list-item">
+                        <a href="{{url}}">{{name}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                
+            {{/if}}
+            <p class="mavens-blog-date">{{#if post.author}}{{lang 'blog.posted_by' name=post.author}} on {{/if}}{{post.date_published}}</p>
+        </div>
+
+
+        <!-- {{>components/common/share url=post.url}} -->
+
+    </div>
+</article>
