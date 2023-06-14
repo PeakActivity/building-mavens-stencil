@@ -1,0 +1,89 @@
+<article class="mavens-blog-article">
+  <div class="mavens__max__width__container">
+    <div class="mavens-blog-post-body">
+      <header class="mavens-blog-header">
+        <h1 class="mavens-blog-title">
+          <a href="{{post.url}}">{{post.title}} </a>
+        </h1>
+        {{#if post.author}}
+        <p class="mavens-blog-details-label">By</p>
+        <p class="mavens-blog-details">{{post.author}}</p>
+        {{/if}} {{#if post.date_published}}
+        <p class="mavens-blog-details-label">Date</p>
+        <p class="mavens-blog-details">{{post.date_published}}</p>
+        {{/if}}
+      </header>
+    </div>
+  </div>
+
+  <div style="background-color: white">
+    <div class="blog-post-body">
+      <div class="blog-post">
+        {{#if post.body}} {{{post.body}}} {{else}} {{{post.summary}}} {{#if
+        post.show_read_more}} &hellip;
+        <a href="{{url}}" aria-label="{{post.title}} {{lang 'blog.read_more'}}"
+          >{{lang 'blog.read_more'}}</a
+        >
+        {{/if}} {{/if}}
+      </div>
+
+      {{#if show_tags}} {{#if post.tags}}
+      <ul class="tags">
+        {{#each post.tags}}
+        <li class="tag">
+          <a href="{{url}}">#{{name}}</a>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}} {{/if}} {{>components/common/share url=post.url}}
+    </div>
+  </div>
+</article>
+<div class="mavens__max__width__container">
+  <section class="mavens-read-more-section">
+    <div class="mavens-read-more-header">
+      <h2>Related Posts</h2>
+      <div>
+        <button class="mavens__pill white">View All Posts</button>
+      </div>
+    </div>
+    <div class="mavens-blog-card-list">
+      <div class="mavens-read-more-blog-card">
+        <div>
+          <img class="mavens-read-more-blog-card-img" />
+          <h2 class="mavens-read-more-blog-card-title">
+            Lorem ipsum dolor sit amet consectetur.
+          </h2>
+          <div class="mavens-read-more-blog-card-details">
+            <p class="tag">MARKETING PLAN</p>
+            <p class="date">August 19, 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="mavens-read-more-blog-card">
+        <div>
+          <img class="mavens-read-more-blog-card-img" />
+          <h2 class="mavens-read-more-blog-card-title">
+            Lorem ipsum dolor sit amet consectetur.
+          </h2>
+          <div class="mavens-read-more-blog-card-details">
+            <p class="tag">MARKETING PLAN</p>
+            <p class="date">August 19, 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="mavens-read-more-blog-card">
+        <div>
+          <img class="mavens-read-more-blog-card-img" />
+          <h2 class="mavens-read-more-blog-card-title">
+            Lorem ipsum dolor sit amet consectetur.
+          </h2>
+          <div class="mavens-read-more-blog-card-details">
+            <p class="tag">MARKETING PLAN</p>
+            <p class="date">August 19, 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

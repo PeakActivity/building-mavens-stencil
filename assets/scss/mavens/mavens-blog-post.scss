@@ -1,0 +1,99 @@
+.mavens-blog-article {
+  .mavens-blog-title {
+    a {
+      font-size: 48px;
+      color: white;
+      text-decoration: none;
+    }
+    margin-bottom: 56px;
+  }
+
+  .mavens-blog-details {
+    font-size: 20px;
+    color: white;
+  }
+
+  .mavens-blog-details-label {
+    color: #ad9c94;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .mavens-blog-post-figure {
+    min-height: 600px;
+    background-color: white;
+    img {
+      width: 100%;
+    }
+  }
+
+  .mavens-blog-post {
+    overflow: hidden;
+    margin: auto;
+  }
+}
+
+.mavens-read-more-section {
+  padding-top: 96px;
+
+  .mavens-read-more-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      margin: 0;
+      color: white;
+      font-size: 48px;
+    }
+    button {
+      display: none;
+    }
+
+    border-bottom: 1px solid #898989;
+    padding-bottom: 64px;
+  }
+
+  .mavens-blog-card-list {
+    .mavens-read-more-blog-card {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #898989;
+      padding: 50px 0px;
+      .mavens-read-more-blog-card-img {
+        width: 100%;
+        height: 240px;
+      }
+
+      .mavens-read-more-blog-card-title {
+        color: white;
+        font-size: 32px;
+      }
+
+      .mavens-read-more-blog-card-details {
+        display: flex;
+        gap: 22px;
+
+        .tag {
+          color: #cec0a4;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+
+        .date {
+          color: white;
+          font-size: 16px;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .mavens-read-more-blog-card {
+        border-bottom: none;
+      }
+    }
+  }
+}
