@@ -1,5 +1,7 @@
 ---
 blog:
+  recent_posts:
+    limit: 8
   posts:
     limit: 5
     pages: 3
@@ -30,20 +32,14 @@ blog:
   <div class="mavens__max__width__container">
     <h1 id="blog-header" class="blog-page-header"></h1>
   </div>
-  <!-- {{#unless theme_settings.hide_blog_page_heading }}
-  <h1 class="page-heading">{{ blog.name }}</h1>
-  {{/unless}} -->
-  {{#if blog.posts}}
-  <div class="mavens-blog-list-container">
+  <div style="background-color: white">
     <div class="mavens__max__width__container">
-      {{#each blog.posts}} {{> components/mavens/blog-post-card post=this
-      theme_settings=../theme_settings}}
-
-      <!-- {{> components/blog/post post=this theme_settings=../theme_settings}} -->
-      {{/each}} {{> components/common/paginator pagination.blog}}
+      <div class="mavens-blog-list-container">
+        {{#each blog.posts}} {{> components/mavens/blog-post-card post=this
+        theme_settings=../theme_settings}} {{/each}}
+      </div>
     </div>
   </div>
-  {{/if}}
 </section>
 
 {{/partial}} {{> layout/base}}

@@ -9,6 +9,8 @@
 .mavens-blog-list-container {
   background-color: white;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   .mavens-blog-card {
     background-color: white;
