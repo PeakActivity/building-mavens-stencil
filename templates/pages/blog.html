@@ -6,7 +6,21 @@ blog:
     summary: 200
 ---
 
-{{#partial "head"}} {{#if pagination.blog.previous}}
+{{#partial "head"}}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var header = document.getElementById('blog-header');
+    // Get the referrer URL
+    if (window.location.pathname.includes('/projects')) {
+      // The path '/projects' exists in the referrer URL
+      header.innerHTML = 'Projects';
+    } else {
+      // The path '/projects' does not exist in the referrer URL
+      header.innerHTML = 'Blog';
+    }
+  });
+</script>
+{{#if pagination.blog.previous}}
 <link rel="prev" href="{{pagination.blog.previous}}" />
 {{/if}} {{#if pagination.blog.next}}
 <link rel="next" href="{{pagination.blog.next}}" />
@@ -14,13 +28,12 @@ blog:
 
 <section>
   <div class="mavens__max__width__container">
-    <h1 class="blog-page-header">
-      Lorem ipsum dolor sit amet consectetur. Nisi molestie nulla eleifend.
-    </h1>
+    <h1 id="blog-header" class="blog-page-header"></h1>
   </div>
   <!-- {{#unless theme_settings.hide_blog_page_heading }}
   <h1 class="page-heading">{{ blog.name }}</h1>
   {{/unless}} -->
+  {{#if blog.posts}}
   <div class="mavens-blog-list-container">
     <div class="mavens__max__width__container">
       {{#each blog.posts}} {{> components/mavens/blog-post-card post=this
@@ -30,6 +43,7 @@ blog:
       {{/each}} {{> components/common/paginator pagination.blog}}
     </div>
   </div>
+  {{/if}}
 </section>
 
 {{/partial}} {{> layout/base}}
