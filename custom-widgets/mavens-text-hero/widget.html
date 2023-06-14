@@ -1,139 +1,147 @@
 <style>
-    .mavens-hero {
-        text-align: left;
-    }
+  .mavens-hero {
+    text-align: left;
+  }
 
+  .mavens-hero .mavens-heading {
+    font-size: 12vw;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .mavens-hero .mavens-heading span {
+    display: block;
+  }
+
+  @media (min-width: 1375px) {
     .mavens-hero .mavens-heading {
-        font-size: 12vw;
-        white-space: nowrap;
-        margin-bottom: 20px;
-        color: white;
-        font-weight: bold;
+      font-size: 165px;
     }
+  }
 
-    .mavens-hero .mavens-heading span {
-        display: block;
-    }
+  .mavens-sub-row {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+  }
 
-    @media (min-width: 1375px) {
-        .mavens-hero .mavens-heading {
-            font-size: 165px;
-        }
-    }
-
+  @media (min-width: 768px) {
     .mavens-sub-row {
-        flex-direction: column;
-        align-items: flex-start;
-        display: flex;
-        justify-content: center;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .mavens-sub-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 2em;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: white;
+  }
+
+  .mavens__cta__hero {
+    display: flex;
+    flex: 0;
+    align-items: center;
+    justify-content: flex-start;
+    height: 200px;
+    background-color: #00308c !important;
+  }
+
+  .mavens__cta__hero .circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+  }
+
+  .mavens__cta__hero .circle .circle-image {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .mavens__cta__hero .circle .circle-text-image {
+    animation: in 12s linear 0s infinite normal;
+  }
+
+  .mavens__cta__hero .circle .arrow-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    /* Adjust the size as needed */
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mavens__cta__hero .circle .reverse-wrapper {
+    position: absolute;
+    animation: in 6s linear 0s infinite reverse;
+    animation-play-state: paused;
+    max-width: 95%;
+    max-height: 95%;
+    left: 5px;
+    top: 5px;
+  }
+
+  .mavens__cta__hero .circle:hover {
+    cursor: pointer;
+  }
+
+  .mavens__cta__hero .circle:hover .arrow-icon {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .mavens__cta__hero .circle:hover .reverse-wrapper {
+    animation-play-state: running;
+  }
+
+  @keyframes in {
+    from {
+      transform: rotate(0deg);
     }
 
-    @media (min-width: 768px) {
-        .mavens-sub-row {
-            flex-direction: row;
-            align-items: center;
-        }
+    to {
+      transform: rotate(360deg);
     }
-
-    .mavens-sub-text {
-        flex: 1;
-        text-align: left;
-        padding-right: 2em;
-        margin-bottom: 20px;
-        font-size: 26px;
-        color: white;
-    }
-
-    .mavens__cta__hero {
-        display: flex;
-        flex: 0;
-        align-items: center;
-        justify-content: flex-start;
-        height: 200px;
-        background-color: #00308c !important;
-    }
-
-    .mavens__cta__hero .circle {
-        position: relative;
-        height: 200px;
-        width: 200px;
-    }
-
-    .mavens__cta__hero .circle .circle-image {
-        position: absolute;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-
-    .mavens__cta__hero .circle .circle-text-image {
-        animation: in 12s linear 0s infinite normal;
-    }
-
-    .mavens__cta__hero .circle .arrow-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50px;
-        /* Adjust the size as needed */
-        height: 50px;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .mavens__cta__hero .circle .reverse-wrapper {
-        position: absolute;
-        animation: in 6s linear 0s infinite reverse;
-        animation-play-state: paused;
-        max-width: 95%;
-        max-height: 95%;
-        left: 5px;
-        top: 5px;
-    }
-
-    .mavens__cta__hero .circle:hover {
-        cursor: pointer;
-    }
-
-    .mavens__cta__hero .circle:hover .arrow-icon {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .mavens__cta__hero .circle:hover .reverse-wrapper {
-        animation-play-state: running;
-    }
-
-    @keyframes in {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
+  }
 </style>
 
 <div class="mavens__max__width__container">
-    <section>
-        <div class="mavens-hero">
-            <h1 class="mavens-heading">
-                {{{title}}}
-            </h1>
-            <div class="mavens-sub-row">
-                <div class="mavens-sub-text">
-                    {{{content}}}
-                </div>
-                <div class="mavens__cta__hero">
-                    <div class="circle">
-                        <img src="{{cdn 'assets/img/Circle.png'}}" alt="Circle" class="circle-image" />
-                        <div class="reverse-wrapper">
-                            <img src="{{cdn 'assets/img/Text.png'}}" alt="Circular Text" class="circle-text-image" />
-                        </div>
-                        <img src="{{cdn 'assets/img/Arrow.png'}}" alt="Circular Text" class="arrow-icon" />
-                    </div>
-                </div>
+  <section>
+    <div class="mavens-hero">
+      <h1 class="mavens-heading">{{{title}}}</h1>
+      <div class="mavens-sub-row">
+        <div class="mavens-sub-text">{{{content}}}</div>
+        <div class="mavens__cta__hero">
+          <div class="circle">
+            <img
+              src="{{cdn 'assets/img/Circle.png'}}"
+              alt="Circle"
+              class="circle-image"
+            />
+            <div class="reverse-wrapper">
+              <img
+                src="{{cdn 'assets/img/Text.png'}}"
+                alt="Circular Text"
+                class="circle-text-image"
+              />
             </div>
+            <img
+              src="{{cdn 'assets/img/Arrow.png'}}"
+              alt="Circular Text"
+              class="arrow-icon"
+            />
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </div>
