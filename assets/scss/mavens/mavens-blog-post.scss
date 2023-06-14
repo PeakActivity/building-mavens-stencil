@@ -6,6 +6,11 @@
       text-decoration: none;
     }
     margin-bottom: 56px;
+    @media (min-width: $breakpoint-md) {
+      a {
+        font-size: 80px;
+      }
+    }
   }
 
   .mavens-blog-details {
