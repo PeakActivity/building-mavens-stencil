@@ -1,0 +1,167 @@
+.mavens__max__width__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mavens-footer-hero {
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  padding: 0px 20px;
+  max-width: 50%;
+
+  .mavens-footer-heading {
+    font-size: calc(min(164px, 11vw));
+    color: white;
+    font-weight: 500;
+    margin: 0;
+
+    span {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1375px) {
+    flex-direction: row;
+    padding: 0px 20px;
+  }
+}
+
+.mavens-footer-sub-row {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  margin: 0.67em 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.mavens__footer__cta__hero {
+  display: flex;
+  flex: 0;
+  align-items: center;
+  justify-content: flex-start;
+  height: 200px;
+  background-color: #00308c !important;
+
+  .circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+
+    .circle-image {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .circle-text-image {
+      animation: in 12s linear 0s infinite normal;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .reverse-wrapper {
+      position: absolute;
+      animation: in 6s linear 0s infinite reverse;
+      animation-play-state: paused;
+      max-width: 95%;
+      max-height: 95%;
+      left: 5px;
+      top: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .arrow-icon {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      .reverse-wrapper {
+        animation-play-state: running;
+      }
+    }
+  }
+
+  @media (min-width: 1375px) {
+    padding-top: 120px;
+    padding-left: 120px;
+  }
+}
+
+.mavens-footer-nav {
+  margin: 130px 40px 0px 40px;
+  border-top: 1px solid #eee;
+
+  .mavens-link-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-top: 50px;
+      padding: 0px;
+      gap: 40px;
+
+      li a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .mavens-footer-social-icon {
+    height: 20px;
+    width: 20px;
+    color: white;
+    fill: white;
+  }
+}
+
+.mavens-legal-text {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 77px;
+
+  h4,
+  a {
+    color: #d1cac7;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+@keyframes in {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

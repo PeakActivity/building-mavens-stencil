@@ -1,22 +1,13 @@
 ---
 blog:
-    recent_posts:
-        limit: 3
+  recent_posts:
+    limit: 3
 ---
 
-{{#partial "head"}}
-
-{{/partial}} {{#partial "page"}}
+{{#partial "head"}} {{/partial}} {{#partial "page"}}
 <div class="mavens__base">
-  {{{region name="mavens-text-hero"}}}
-
-  {{{region name="mavens-hero-video"}}}
-
-  {{{region name="mavens-about-section"}}}
-
-  {{{region name="mavens-who-we-are"}}}
-
-
+  {{{region name="mavens-text-hero"}}} {{{region name="mavens-hero-video"}}}
+  {{{region name="mavens-about-section"}}} {{{region name="mavens-who-we-are"}}}
   {{{region name="mavens-our-projects"}}}
   <div style="background-color: white">
     <div class="mavens__max__width__container">
@@ -92,28 +83,24 @@ blog:
         </div>
 
         {{#each blog.recent_posts}}
-          <div class="mavens__blog__card">
-            <div>
-              <img
-              src="{{getImage thumbnail 'gallery_size'}}" 
+        <div class="mavens__blog__card">
+          <div>
+            <img
+              src="{{getImage thumbnail 'gallery_size'}}"
               alt="{{thumbnail.alt}}"
-                class="mavens__project__image"
-              />
-            </div>
-            <div class="mavens__blog__title__container">
-              <h4 class="mavens__blog__title">
-                {{summary}}
-              </h4>
-              <div class="mavens__blog__info">
-                {{#if tags}}
-                  {{#each tags}}
-                    <p class="category">{{name}}</p>
-                  {{/each}}
-                {{/if}}
-                <p class="date">{{date_published}}</p>
-              </div>
+              class="mavens__project__image"
+            />
+          </div>
+          <div class="mavens__blog__title__container">
+            <h4 class="mavens__blog__title">{{summary}}</h4>
+            <div class="mavens__blog__info">
+              {{#if tags}} {{#each tags}}
+              <p class="category">{{name}}</p>
+              {{/each}} {{/if}}
+              <p class="date">{{date_published}}</p>
             </div>
           </div>
+        </div>
         {{/each}}
         <div>
           <form action="/blog/">
@@ -125,22 +112,5 @@ blog:
       </div>
     </div>
   </section>
-
-  <div class="mavens__max__width__container">
-    <div class="mavens-hero">
-      <h1 class="mavens-heading">
-        <span>Let's Start</span>
-        <span>Something</span>
-        <span>New Together</span>
-      </h1>
-      <div class="mavens-sub-row">
-        <div class="mavens__cta__hero">
-          <svg>
-            <use xlink:href="#icon-mavens-cta" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
   {{/partial}} {{> layout/base}}
 </div>
