@@ -1,0 +1,119 @@
+<style>
+    .mavens-our-story-section {
+        background-color: white;
+        padding: 80px 0px;
+        color: black;
+    }
+
+    .mavens-our-story-section p {
+        font-size: 32px;
+    }
+
+    .mavens__full__width__image {
+        background-image: url('{{backgroundImage.src}}');
+        background-position: center center;
+        background-size: cover;
+        min-height: 860px;
+        min-width: 100%;
+        margin: 120px 0px;
+    }
+
+    @media (max-width: 768px) {
+        .mavens__full__width__image {
+            min-height: 378px;
+        }
+    }
+
+    .mavens__full__width__image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .values__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .values__container .value__card h1 {
+        font-size: 48px;
+        color: black;
+    }
+
+    @media (min-width: 768px) {
+        .values__container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .values__container .value__card {
+            max-width: 45%;
+        }
+
+        .values__container .value__card h1 {
+            font-size: 64px;
+        }
+    }
+</style>
+<section class="mavens-our-story-section">
+    <div class="mavens__max__width__container">
+        <div style="margin-bottom: 36px">
+            <button class="mavens__pill brown">Our Story</button>
+        </div>
+        <p>
+           {{ourStoryContent}} 
+        </p>
+    </div>
+    <div class="mavens__full__width__image"></div>
+    <div class="mavens__max__width__container">
+        <div style="margin-bottom: 36px">
+            <button class="mavens__pill brown">Our Values</button>
+        </div>
+        <p>
+            {{ourValuesContent}}
+        </p>
+    </div>
+    <div class="mavens__max__width__container">
+        <div class="values__container">
+            <div class="value__card">
+                <h1>{{ourValuesTitle1}}</h1>
+                <p>
+                    {{ourValuesContent1}}
+                </p>
+            </div>
+            <div class="value__card">
+                <h1>{{ourValuesTitle2}}</h1>
+                <p>
+                    {{ourValuesContent2}}
+                </p>
+            </div>
+            <div class="value__card">
+                <h1>{{ourValuesTitle3}}</h1>
+                <p>
+                    {{ourValuesContent3}}
+                </p>
+            </div>
+            <div class="value__card">
+                <h1>{{ourValuesTitle4}}</h1>
+                <p>
+                    {{ourValuesContent4}}
+                </p>
+            </div>
+            <div class="value__card">
+                <h1>{{ourValuesTitle5}}</h1>
+                <p>
+                    {{ourValuesContent5}}
+                </p>
+            </div>
+            <div class="value__card">
+                <h1>{{ourValuesTitle6}}</h1>
+                <p>
+                    {{ourValuesContent6}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

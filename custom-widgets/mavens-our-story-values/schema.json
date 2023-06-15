@@ -1,0 +1,102 @@
+[
+  {
+    "type": "tab",
+    "label": "Our Values and Our Story",
+    "sections": [
+      {
+        "label": "Our Story",
+        "settings": [
+          {
+            "type": "text",
+            "id": "ourStoryContent",
+            "label": "Our Story Content",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          },
+          {
+            "type": "imageManager",
+            "id": "backgroundImage",
+            "label": "Larg Image",
+            "default": "https://picsum.photos/619/443"
+          }
+        ]
+      },
+      {
+        "label": "Our Values",
+        "settings": [
+          {
+            "type": "input",
+            "id": "ourValuesTitle1",
+            "label": "Our Values Title 1",
+            "default": "Value Title"
+          },
+          {
+            "type": "text",
+            "id": "ourValuesContent1",
+            "label": "Our Values Content 1",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          },
+          {
+            "type": "input",
+            "id": "ourValuesTitle2",
+            "label": "Our Values Title 2",
+            "default": "Value Title"
+          },
+          {
+            "type": "text",
+            "id": "ourValuesContent2",
+            "label": "Our Values Content 2",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          },
+          {
+            "type": "input",
+            "id": "ourValuesTitle3",
+            "label": "Our Values Title 3",
+            "default": "Value Title"
+          },
+          {
+            "type": "text",
+            "id": "ourValuesContent3",
+            "label": "Our Values Content 3",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          },
+          {
+            "type": "input",
+            "id": "ourValuesTitle4",
+            "label": "Our Values Title 4",
+            "default": "Value Title"
+          },
+          {
+            "type": "text",
+            "id": "ourValuesContent4",
+            "label": "Our Values Content 4",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          },
+          {
+            "type": "input",
+            "id": "ourValuesTitle5",
+            "label": "Our Values Title 5",
+            "default": "Value Title"
+          },
+          {
+            "type": "text",
+            "id": "ourValuesContent5",
+            "label": "Our Values Content 5",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          },
+          {
+            "type": "input",
+            "id": "ourValuesTitle6",
+            "label": "Our Values Title 6",
+            "default": "Value Title"
+          },
+          {
+            "type": "text",
+            "id": "ourValuesContent6",
+            "label": "Our Values Content 6",
+            "default": "Lorem ipsum dolor sit amet consectetur. Mi aliquam tincidunt egestas elit tellus. Fusce est ac ultricies at ut pellentesque vel amet. Sagittis tortor curabitur semper consectetur vulputate mi mauris. Egestas lacinia morbi faucibus vitae laoreet feugiat tortor lacinia. In pellentesque elementum eget euismod neque metus enim elit auctor. Ac."
+          }
+        ]
+      }
+    ]
+  }
+]

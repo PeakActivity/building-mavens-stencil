@@ -1,0 +1,67 @@
+[
+  {
+    "type": "tab",
+    "label": "Our Projects",
+    "sections": [
+      {
+        "label": "Our Projects",
+        "settings": [
+          {
+            "type": "input",
+            "id": "sectionTitle",
+            "label": "Section Title",
+            "default": "Find More Information About Our Building Inspection Services"
+          },
+          {
+            "type": "imageManager",
+            "id": "imageUrl1",
+            "label": "Project Image 1",
+            "default": "https://picsum.photos/619/443"
+          },
+          {
+            "type": "input",
+            "id": "blogTitle1",
+            "label": "Blog Title 1",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          },
+          {
+            "type": "text",
+            "id": "blogContent1",
+            "label": "Blog Content 1",
+            "default": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi perferendis provident excepturi cupiditate, ullam voluptates placeat, qui sed mollitia libero dolor harum ex. Ipsam, quasi quisquam! Officiis autem nihil quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam commodi tempore repellat eius, voluptas ut ducimus laudantium excepturi assumenda! Nisi atque sequi inventore cum sit ipsa aut mollitia provident accusantium?"
+          },
+          {
+            "type": "text",
+            "id": "blogDate1",
+            "label": "Blog Date 1",
+            "default": "July 22, 2022"
+          },
+          {
+            "type": "imageManager",
+            "id": "imageUrl2",
+            "label": "Project Image 2",
+            "default": "https://picsum.photos/619/443"
+          },
+          {
+            "type": "input",
+            "id": "blogTitle2",
+            "label": "Blog Title 2",
+            "default": "2 Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          },
+          {
+            "type": "text",
+            "id": "blogContent2",
+            "label": "Blog Content 2",
+            "default": "2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi perferendis provident excepturi cupiditate, ullam voluptates placeat, qui sed mollitia libero dolor harum ex. Ipsam, quasi quisquam! Officiis autem nihil quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam commodi tempore repellat eius, voluptas ut ducimus laudantium excepturi assumenda! Nisi atque sequi inventore cum sit ipsa aut mollitia provident accusantium?"
+          },
+          {
+            "type": "text",
+            "id": "blogDate2",
+            "label": "Blog Date 2",
+            "default": "July 23, 2022"
+          }
+        ]
+      }
+    ]
+  }
+]

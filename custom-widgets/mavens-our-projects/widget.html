@@ -1,0 +1,110 @@
+<style>
+  .mavens__project__section {
+    padding: 80px 0px;
+  }
+  .mavens__project__section h3 {
+    font-size: 48px;
+    margin-bottom: 2.28rem;
+  }
+  .mavens__project__section .mavens__project__container {
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mavens__project__section .mavens__project__container .mavens__project__card {
+    max-width: 619px;
+    margin-bottom: 10px;
+  }
+  .mavens__project__section
+    .mavens__project__container
+    .mavens__project__image {
+    width: 619px;
+    flex-grow: 0;
+  }
+  .mavens__project__section
+    .mavens__project__container
+    .mavens__image__subheading {
+    font-size: 32px;
+    text-transform: capitalize;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mavens__project__section
+    .mavens__project__container
+    .mavens__image__subtext {
+    color: #717171;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mavens__project__section .mavens__project__container .mavens__date {
+    background-color: #eee;
+    color: #b58f47;
+    text-transform: uppercase;
+    max-width: fit-content;
+    padding: 4px 10px;
+    border-radius: 40px;
+  }
+  .mavens__project__section .mavens__project__container .mavens__date p {
+    margin: 0;
+    line-height: 1;
+  }
+  .mavens__project__section
+    .mavens__project__container
+    .mavens__project__cta__container {
+    margin-top: 45px;
+  }
+  @media (min-width: 768px) {
+    .mavens__project__section .mavens__project__container {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width: 768px) {
+    .mavens__project__section {
+      padding: 140px 0px;
+    }
+    .mavens__project__section h3 {
+      font-size: 64px;
+    }
+  }
+</style>
+<div style="background-color: white">
+  <div class="mavens__max__width__container">
+    <div class="mavens__project__section">
+      <div><button class="mavens__pill brown">Our Projects</button></div>
+      <h3>{{sectionTitle}}</h3>
+      <div class="mavens__project__container">
+        <div class="mavens__project__card">
+          <div>
+            <img src="{{imageUrl1}}" class="mavens__project__image" />
+            <h4 class="mavens__image__subheading">{{blogTitle1}}</h4>
+            <p class="mavens__image__subtext">{{blogContent1}}</p>
+            <div class="mavens__date">
+              <p>{{blogDate1}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mavens__project__card">
+            <div>
+              <img src="{{imageUrl2}}" class="mavens__project__image" />
+              <h4 class="mavens__image__subheading">{{blogTitle2}}</h4>
+              <p class="mavens__image__subtext">{{blogContent2}}</p>
+              <div class="mavens__date">
+                <p>{{blogDate2}}</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
