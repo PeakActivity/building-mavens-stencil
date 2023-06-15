@@ -5,7 +5,8 @@
     "page": {
       "mavens-home": "/home/",
       "mavens-about-us": "/about-us/",
-      "mavens-services": "/services/"
+      "mavens-services": "/services/",
+      "mavens-contact-us": "/contact-us/"
     },
     "product": {}
   },
