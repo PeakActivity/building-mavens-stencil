@@ -5,7 +5,7 @@ blog:
   posts:
     limit: 5
     pages: 3
-    summary: 800
+    summary: 1000
 ---
 
 {{#partial "head"}}
@@ -22,21 +22,37 @@ blog:
     }
   });
 </script>
-{{#if pagination.blog.previous}}
-<link rel="prev" href="{{pagination.blog.previous}}" />
-{{/if}} {{#if pagination.blog.next}}
-<link rel="next" href="{{pagination.blog.next}}" />
-{{/if}} {{/partial}} {{#partial "page"}}
+{{/partial}} {{#partial "page"}}
 
 <section>
   <div class="mavens__max__width__container">
     <h1 id="blog-header" class="blog-page-header"></h1>
   </div>
-  <div style="background-color: white">
+  <div style="background-color: white; padding: 12px 0px">
     <div class="mavens__max__width__container">
       <div class="mavens-blog-list-container">
         {{#each blog.posts}} {{> components/mavens/blog-post-card post=this
         theme_settings=../theme_settings}} {{/each}}
+      </div>
+    </div>
+    <div class="mavens__max__width__container">
+      <div class="mavens-pagination">
+        {{#if pagination.blog.previous}}
+        <a rel="prev" href="{{pagination.blog.previous}}">
+          <span
+            ><svg class="left">
+              <use xlink:href="#icon-mavens-arrow-right"></use></svg></span
+          >Previous</a
+        >
+        {{/if}} {{#if pagination.blog.next}}
+        <a rel="next" href="{{pagination.blog.next}}"
+          >Next
+          <span>
+            <svg class="right">
+              <use xlink:href="#icon-mavens-arrow-right"></use>
+            </svg> </span
+        ></a>
+        {{/if}}
       </div>
     </div>
   </div>

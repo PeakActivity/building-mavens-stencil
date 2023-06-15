@@ -6,6 +6,44 @@
   padding: 58px 0px;
 }
 
+.mavens-pagination {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  a {
+    color: #00308c;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding: 4px 12px;
+    border-radius: 40px;
+    border: solid 1px #00308c;
+    span svg,
+    use {
+      height: 2em;
+      width: 2em;
+    }
+
+    span svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.right {
+        rotate: 45deg;
+      }
+
+      &.left {
+        rotate: 225deg;
+      }
+    }
+  }
+}
+
 .mavens-blog-list-container {
   background-color: white;
   display: flex;
