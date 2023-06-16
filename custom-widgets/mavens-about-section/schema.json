@@ -55,7 +55,7 @@
           },
           {
             "type": "input",
-            "id": "services-one-URL1",
+            "id": "services-one-URL",
             "label": "Services - List Item 1 URL",
             "default": "https://www.w3docs.com/"
           },
@@ -67,7 +67,7 @@
           },
           {
             "type": "input",
-            "id": "services-one-URL2",
+            "id": "services-two-URL",
             "label": "Services - List Item 2 URL",
             "default": "https://www.w3docs.com/"
           },
@@ -79,7 +79,7 @@
           },
           {
             "type": "input",
-            "id": "services-one-URL3",
+            "id": "services-three-URL",
             "label": "Services - List Item 3 URL",
             "default": "https://www.w3docs.com/"
           },
