@@ -11,7 +11,7 @@ header {
   justify-content: space-around;
 
   h1,
-  .description {
+  #description {
     color: white;
     flex-basis: 50%;
   }
@@ -21,10 +21,7 @@ header {
     font-weight: 500;
   }
 
-  .description {
-    font-size: 2em;
-    flex-basis: 50%;
-    font-weight: normal;
+  #description {
     overflow: hidden;
     text-overflow: ellipsis;
     max-height: 300px;
@@ -35,7 +32,7 @@ header {
     align-items: center;
 
     h1,
-    .description {
+    #description {
       flex-basis: 100%;
     }
   }
@@ -63,4 +60,6 @@ header {
   padding: 20px;
   color: black;
   font-size: 20px;
+  max-width: 100%;
+  overflow: hidden;
 }
