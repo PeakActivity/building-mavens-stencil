@@ -50,8 +50,14 @@
           {
             "type": "input",
             "id": "services-one",
-            "label": "Expert Witness and Construction Litigation Support",
+            "label": "Services - List Item 1",
             "default": "What We Specialize In"
+          },
+          {
+            "type": "input",
+            "id": "services-one-URL1",
+            "label": "Services - List Item 1 URL",
+            "default": "https://www.w3docs.com/"
           },
           {
             "type": "input",
@@ -61,9 +67,21 @@
           },
           {
             "type": "input",
+            "id": "services-one-URL2",
+            "label": "Services - List Item 2 URL",
+            "default": "https://www.w3docs.com/"
+          },
+          {
+            "type": "input",
             "id": "services-three",
             "label": "Services - List Item 3",
             "default": "Condominium Turnover and Property Condition Assessments"
+          },
+          {
+            "type": "input",
+            "id": "services-one-URL3",
+            "label": "Services - List Item 3 URL",
+            "default": "https://www.w3docs.com/"
           },
           {
             "type": "input",
@@ -73,8 +91,14 @@
           },
           {
             "type": "input",
+            "id": "services-one-URL3",
+            "label": "Services - List Item 3 URL",
+            "default": "https://www.w3docs.com/"
+          },
+          {
+            "type": "input",
             "id": "services-CTA-URL",
-            "label": "Services - List Item 3",
+            "label": "Services - CTA URL",
             "default": "https://www.w3docs.com/"
           }
         ]

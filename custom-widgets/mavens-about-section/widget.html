@@ -49,6 +49,10 @@
         border-bottom: 1px solid #d1cac7;
     }
 
+    .mavens__services__section .mavens__services__container a {
+        text-decoration: none;
+    }
+
     .mavens__services__section .mavens__services__container>div:last-child {
         padding: 80px 0px;
     }
@@ -340,33 +344,39 @@
                 </h3>
             </div>
             <div class="mavens__services__container">
-                <div class="mavens__service__card">
-                    <button class="mavens__pill brown">01</button>
-                    <div class="mavens__service__text__container">
-                        <h3>{{services-one}}</h3>
-                        <svg class="services-arrow-icon">
-                            <use xlink:href="#icon-mavens-arrow-right" />
-                        </svg>
+                <a href="{{services-one-URL1}}">
+                    <div class="mavens__service__card">
+                        <button class="mavens__pill brown">01</button>
+                        <div class="mavens__service__text__container">
+                            <h3>{{services-one}}</h3>
+                            <svg class="services-arrow-icon">
+                                <use xlink:href="#icon-mavens-arrow-right" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <div class="mavens__service__card">
-                    <button class="mavens__pill brown">02</button>
-                    <div class="mavens__service__text__container">
-                        <h3>{{services-two}}</h3>
-                        <svg class="services-arrow-icon">
-                            <use xlink:href="#icon-mavens-arrow-right" />
-                        </svg>
+                </a>
+                <a href="{{services-one-URL2}}">
+                    <div class="mavens__service__card">
+                        <button class="mavens__pill brown">02</button>
+                        <div class="mavens__service__text__container">
+                            <h3>{{services-two}}</h3>
+                            <svg class="services-arrow-icon">
+                                <use xlink:href="#icon-mavens-arrow-right" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <div class="mavens__service__card">
-                    <button class="mavens__pill brown">03</button>
-                    <div class="mavens__service__text__container">
-                        <h3>{{services-three}}</h3>
-                        <svg class="services-arrow-icon">
-                            <use xlink:href="#icon-mavens-arrow-right" />
-                        </svg>
+                </a>
+                <a href="{{services-one-URL3}}">
+                    <div class="mavens__service__card">
+                        <button class="mavens__pill brown">03</button>
+                        <div class="mavens__service__text__container">
+                            <h3>{{services-three}}</h3>
+                            <svg class="services-arrow-icon">
+                                <use xlink:href="#icon-mavens-arrow-right" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div>
                     <form action="{{services-CTA-URL}}">
                         <button class="mavens__pill">
