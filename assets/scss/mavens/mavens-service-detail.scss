@@ -1,0 +1,63 @@
+.mavens__max__width__services__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  background-color: #00308c;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  h1,
+  h2 {
+    color: white;
+    flex-basis: 50%;
+  }
+
+  h1 {
+    font-size: 4em;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 2em;
+    flex-basis: 50%;
+    font-weight: normal;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    h1,
+    h2 {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.service-hero-background {
+  background: linear-gradient(to top, white 85%, #00308c 15%);
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+
+.service-hero-image {
+  width: 100%;
+  min-height: 760px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.service-content {
+  padding: 20px;
+  color: black;
+  font-size: 20px;
+}

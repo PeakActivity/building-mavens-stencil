@@ -6,7 +6,12 @@
       "mavens-home": "/home/",
       "mavens-about-us": "/about-us/",
       "mavens-services": "/services/",
-      "mavens-contact-us": "/contact-us/"
+      "mavens-contact-us": "/contact-us/",
+      "mavens-service-detail": [
+        "/services/milestone-inspections/",
+        "/services/structural-integrity-reserve-studies-sirs/",
+        "/services/infrared-thermography-inspection-services/"
+      ]
     },
     "product": {}
   },
