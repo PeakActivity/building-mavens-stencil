@@ -11,7 +11,7 @@ header {
   justify-content: space-around;
 
   h1,
-  h2 {
+  .description {
     color: white;
     flex-basis: 50%;
   }
@@ -21,10 +21,13 @@ header {
     font-weight: 500;
   }
 
-  h2 {
+  .description {
     font-size: 2em;
     flex-basis: 50%;
     font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 300px;
   }
 
   @media (max-width: 768px) {
@@ -32,7 +35,7 @@ header {
     align-items: center;
 
     h1,
-    h2 {
+    .description {
       flex-basis: 100%;
     }
   }
@@ -46,7 +49,7 @@ header {
 
 .service-hero-image {
   width: 100%;
-  min-height: 760px;
+  height: 760px;
   overflow: hidden;
 
   img {

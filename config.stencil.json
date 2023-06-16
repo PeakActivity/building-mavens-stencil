@@ -10,7 +10,9 @@
       "mavens-service-detail": [
         "/services/milestone-inspections/",
         "/services/structural-integrity-reserve-studies-sirs/",
-        "/services/infrared-thermography-inspection-services/"
+        "/services/infrared-thermography-inspection-services/",
+        "/services/construction-litigation-and-expert-witness/",
+        "/services/building-safety-and-recertification-inspection-services/"
       ]
     },
     "product": {}
