@@ -1,0 +1,35 @@
+{{#partial "page"}}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var metaTags = document.getElementsByTagName('meta');
+    let description = '';
+    for (var i = 0; i < metaTags.length; i++) {
+      if (metaTags[i].getAttribute('name') === 'description') {
+        description = metaTags[i].getAttribute('content');
+        break;
+      }
+    }
+    document.getElementById('description').innerHTML = description;
+  });
+</script>
+<div class="mavens__max__width__container">
+  <header>
+    <h1>{{page.title}}</h1>
+    <h2 id="description"></h2>
+  </header>
+</div>
+
+<div class="service-hero-background">
+  <div class="mavens__max__width__services__container">
+    <div class="service-hero-image">
+      <img src="" />
+    </div>
+  </div>
+</div>
+
+<div style="background-color: white">
+  <div class="mavens__max__width__services__container">
+    <section class="service-content">{{{page.content}}}</section>
+  </div>
+</div>
+{{/partial}} {{> layout/base}}
