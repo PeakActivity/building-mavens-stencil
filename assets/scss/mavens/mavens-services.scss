@@ -153,7 +153,6 @@ $max-width: 1440px;
     align-items: flex-start;
     justify-content: center;
     gap: 20px;
-    transition: all 0.1s ease-in-out !important;
     a {
       text-decoration: none;
     }
@@ -165,6 +164,7 @@ $max-width: 1440px;
       align-items: flex-start;
       justify-content: center;
       padding: 20px 0px;
+      transition: all 0.1s ease-in-out;
 
       h2 {
         font-size: 32px;
@@ -180,12 +180,13 @@ $max-width: 1440px;
         display: flex;
         flex-direction: column;
       }
-    }
-    :hover {
-      h2,
-      p,
-      .service__text__container {
-        color: #b58f47;
+      &:hover {
+        h2,
+        p,
+        .service__text__container {
+          color: #b58f47;
+        }
+        margin-bottom: 20px;
         transition: all 0.1s ease-in-out;
       }
     }
