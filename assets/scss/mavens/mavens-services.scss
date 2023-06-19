@@ -153,6 +153,10 @@ $max-width: 1440px;
     align-items: flex-start;
     justify-content: center;
     gap: 20px;
+    transition: all 0.1s ease-in-out !important;
+    a {
+      text-decoration: none;
+    }
 
     .services__card {
       border-top: 1px solid black;
@@ -175,6 +179,14 @@ $max-width: 1440px;
       .service__text__container {
         display: flex;
         flex-direction: column;
+      }
+    }
+    :hover {
+      h2,
+      p,
+      .service__text__container {
+        color: #b58f47;
+        transition: all 0.1s ease-in-out;
       }
     }
   }
