@@ -20,6 +20,84 @@
     font-size: 48px;
   }
 
+  .temp_team_member_container {
+    padding-top: 43px;
+    .temp_team_member_card {
+      justify-content: space-between;
+      h1,
+      h2,
+      p {
+        margin: 0;
+        line-height: 1;
+        color: white;
+      }
+      h1,
+      h2 {
+        margin-bottom: 8px;
+      }
+      display: flex;
+      .headshot {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: 600px;
+        overflow: hidden;
+        object-fit: cover;
+        margin-right: 40px;
+        img {
+          flex-grow: 0;
+          width: 600px;
+          margin-bottom: 8px;
+        }
+        .links {
+          margin-top: 20px;
+          margin-left: 0;
+          display: flex;
+          width: 100%;
+          gap: 20px;
+          list-style: none;
+          svg {
+            height: 25px;
+            width: 25px;
+            fill: white;
+          }
+        }
+      }
+      .info {
+        .subtext {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+        .about-paragraph {
+          font-size: 1.4em;
+        }
+        .certifications {
+          font-size: 1.2em;
+          margin-bottom: 8px;
+          // display list items in one line
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      }
+    }
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: row;
+      justify-content: center;
+      .temp_team_member_card {
+        flex-direction: column;
+        justify-content: center;
+        .headshot {
+          max-width: 100%;
+          margin-right: 0px;
+        }
+        .info {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+
   .team_member_container {
     padding-top: 43px;
     display: flex;
