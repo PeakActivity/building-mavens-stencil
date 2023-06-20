@@ -1,0 +1,24 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {
+      "mavens-home": "/home/",
+      "mavens-about-us": "/about-us/",
+      "mavens-services": "/services/",
+      "mavens-contact-us": "/contact-us/",
+      "mavens-service-detail": [
+        "/services/milestone-inspections/",
+        "/services/structural-integrity-reserve-studies-sirs/",
+        "/services/infrared-thermography-inspection-services/",
+        "/services/construction-litigation-and-expert-witness/",
+        "/services/building-safety-and-recertification-inspection-services/",
+        "/services/property-turnover-and-condition-assessments/",
+        "/services/commercial-suasdrone-inspections/"
+      ]
+    },
+    "product": {}
+  },
+  "normalStoreUrl": "https://building-mavens.mybigcommerce.com",
+  "port": 3000
+}
