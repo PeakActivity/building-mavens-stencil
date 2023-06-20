@@ -5,7 +5,7 @@ blog:
   posts:
     limit: 5
     pages: 3
-    summary: 1000
+    summary: 500
 ---
 
 {{#partial "head"}}
@@ -19,6 +19,14 @@ blog:
     } else {
       // The path '/projects' does not exist in the referrer URL
       header.innerHTML = 'Blog';
+    }
+
+    // get path to current page
+    var path = window.location.pathname;
+    console.log('path', path);
+    // if path includes projects, set element with class id to hidden
+    if (path.includes('projects')) {
+      document.getElementById('date').style.display = 'none';
     }
   });
 </script>
