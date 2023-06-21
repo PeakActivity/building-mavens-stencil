@@ -38,24 +38,26 @@ $(document).ready(function(){
         </div>
 
         {{#each blog.recent_posts}}
-        <div class="mavens__blog__card">
-          <div>
-            <img
-              src="{{getImage thumbnail 'gallery_size'}}"
-              alt="{{thumbnail.alt}}"
-              class="mavens__project__image"
-            />
-          </div>
-          <div class="mavens__blog__title__container">
-            <h4 class="mavens__blog__title">{{title}}</h4>
-            <div class="mavens__blog__info">
-              {{#if tags}} {{#each tags}}
-              <p class="category">{{name}}</p>
-              {{/each}} {{/if}}
-              <p class="date">{{date_published}}</p>
+        <a href="{{url}}">
+          <div class="mavens__blog__card">
+            <div>
+              <img
+                src="{{getImage thumbnail 'gallery_size'}}"
+                alt="{{thumbnail.alt}}"
+                class="mavens__project__image"
+              />
+            </div>
+            <div class="mavens__blog__title__container">
+              <h4 class="mavens__blog__title">{{title}}</h4>
+              <div class="mavens__blog__info">
+                {{#if tags}} {{#each tags}}
+                <p class="category">{{name}}</p>
+                {{/each}} {{/if}}
+                <p class="date">{{date_published}}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
         {{/each}}
         <div>
           <form action="/blog/">
