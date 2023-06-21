@@ -1,342 +1,146 @@
-{{#partial "head"}}
-<script>
-  // Function to handle form submission
-  function handleSubmit(event) {
-    event.preventDefault(); // Prevent form submission
-
-    // Hide the form
-    document.getElementById('contact-form').classList.add('hide');
-    // Show the thank you message
-    document.getElementById('thank-you-message').classList.add('show');
-  }
-
-  // Wait for DOMContentLoaded event
-  document.addEventListener('DOMContentLoaded', function () {
-    // Add form submission event listener
-    document
-      .getElementById('contact-form')
-      .addEventListener('submit', handleSubmit);
-  });
-</script>
-{{/partial}} {{#partial "page"}}
+{{#partial "page"}}
 <div class="mavens__base">
   <div class="mavens__max__width__container">
     <div class="mavens__services__header">
       <h1>Send Questions and Requests for Proposals</h1>
     </div>
   </div>
-  <div style="background: white">
-    <div class="mavens__max__width__container">
-      <div class="mavens-form" id="mavens-form">
-        <iframe
-          id="JotFormIFrame-231654789597073"
-          title="Contact Form"
-          onload="window.parent.scrollTo(0,0)"
-          allowtransparency="true"
-          allowfullscreen="true"
-          allow="geolocation; microphone; camera"
-          src="https://form.jotform.com/231654789597073"
-          frameborder="0"
-          style="min-width: 100%; max-width: 100%; height: 539px; border: none"
-          scrolling="no"
-        >
-        </iframe>
-        <script type="text/javascript">
-          var ifr = document.getElementById('JotFormIFrame-231654789597073');
-          if (ifr) {
-            var src = ifr.src;
-            var iframeParams = [];
+  <div class="iframe-wrapper">
+    <iframe
+      id="JotFormIFrame-231654789597073"
+      title="Contact Form"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allowfullscreen="true"
+      allow="geolocation; microphone; camera"
+      src="https://form.jotform.com/231654789597073"
+      frameborder="0"
+      style="min-width: 100%; max-width: 100%; height: 539px; border: none"
+      scrolling="no"
+    >
+    </iframe>
+    <script type="text/javascript">
+      var ifr = document.getElementById('JotFormIFrame-231654789597073');
+      if (ifr) {
+        var src = ifr.src;
+        var iframeParams = [];
+        if (window.location.href && window.location.href.indexOf('?') > -1) {
+          iframeParams = iframeParams.concat(
+            window.location.href
+              .substr(window.location.href.indexOf('?') + 1)
+              .split('&')
+          );
+        }
+        if (src && src.indexOf('?') > -1) {
+          iframeParams = iframeParams.concat(
+            src.substr(src.indexOf('?') + 1).split('&')
+          );
+          src = src.substr(0, src.indexOf('?'));
+        }
+        iframeParams.push('isIframeEmbed=1');
+        ifr.src = src + '?' + iframeParams.join('&');
+      }
+      window.handleIFrameMessage = function (e) {
+        if (typeof e.data === 'object') {
+          return;
+        }
+        var args = e.data.split(':');
+        if (args.length > 2) {
+          iframe = document.getElementById(
+            'JotFormIFrame-' + args[args.length - 1]
+          );
+        } else {
+          iframe = document.getElementById('JotFormIFrame');
+        }
+        if (!iframe) {
+          return;
+        }
+        switch (args[0]) {
+          case 'scrollIntoView':
+            iframe.scrollIntoView();
+            break;
+          case 'setHeight':
+            iframe.style.height = args[1] + 'px';
             if (
-              window.location.href &&
-              window.location.href.indexOf('?') > -1
+              !isNaN(args[1]) &&
+              parseInt(iframe.style.minHeight) > parseInt(args[1])
             ) {
-              iframeParams = iframeParams.concat(
-                window.location.href
-                  .substr(window.location.href.indexOf('?') + 1)
-                  .split('&')
-              );
+              iframe.style.minHeight = args[1] + 'px';
             }
-            if (src && src.indexOf('?') > -1) {
-              iframeParams = iframeParams.concat(
-                src.substr(src.indexOf('?') + 1).split('&')
-              );
-              src = src.substr(0, src.indexOf('?'));
+            break;
+          case 'collapseErrorPage':
+            if (iframe.clientHeight > window.innerHeight) {
+              iframe.style.height = window.innerHeight + 'px';
             }
-            iframeParams.push('isIframeEmbed=1');
-            ifr.src = src + '?' + iframeParams.join('&');
-          }
-          window.handleIFrameMessage = function (e) {
-            if (typeof e.data === 'object') {
-              return;
+            break;
+          case 'reloadPage':
+            window.location.reload();
+            break;
+          case 'loadScript':
+            if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) {
+              break;
             }
-            var args = e.data.split(':');
-            if (args.length > 2) {
-              iframe = document.getElementById(
-                'JotFormIFrame-' + args[args.length - 1]
-              );
-            } else {
-              iframe = document.getElementById('JotFormIFrame');
+            var src = args[1];
+            if (args.length > 3) {
+              src = args[1] + ':' + args[2];
             }
-            if (!iframe) {
-              return;
-            }
-            switch (args[0]) {
-              case 'scrollIntoView':
-                iframe.scrollIntoView();
-                break;
-              case 'setHeight':
-                iframe.style.height = args[1] + 'px';
-                if (
-                  !isNaN(args[1]) &&
-                  parseInt(iframe.style.minHeight) > parseInt(args[1])
-                ) {
-                  iframe.style.minHeight = args[1] + 'px';
-                }
-                break;
-              case 'collapseErrorPage':
-                if (iframe.clientHeight > window.innerHeight) {
-                  iframe.style.height = window.innerHeight + 'px';
-                }
-                break;
-              case 'reloadPage':
-                window.location.reload();
-                break;
-              case 'loadScript':
-                if (
-                  !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])
-                ) {
-                  break;
-                }
-                var src = args[1];
-                if (args.length > 3) {
-                  src = args[1] + ':' + args[2];
-                }
-                var script = document.createElement('script');
-                script.src = src;
-                script.type = 'text/javascript';
-                document.body.appendChild(script);
-                break;
-              case 'exitFullscreen':
-                if (window.document.exitFullscreen)
-                  window.document.exitFullscreen();
-                else if (window.document.mozCancelFullScreen)
-                  window.document.mozCancelFullScreen();
-                else if (window.document.mozCancelFullscreen)
-                  window.document.mozCancelFullScreen();
-                else if (window.document.webkitExitFullscreen)
-                  window.document.webkitExitFullscreen();
-                else if (window.document.msExitFullscreen)
-                  window.document.msExitFullscreen();
-                break;
-            }
-            var isJotForm = e.origin.indexOf('jotform') > -1 ? true : false;
+            var script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            document.body.appendChild(script);
+            break;
+          case 'exitFullscreen':
+            if (window.document.exitFullscreen)
+              window.document.exitFullscreen();
+            else if (window.document.mozCancelFullScreen)
+              window.document.mozCancelFullScreen();
+            else if (window.document.mozCancelFullscreen)
+              window.document.mozCancelFullScreen();
+            else if (window.document.webkitExitFullscreen)
+              window.document.webkitExitFullscreen();
+            else if (window.document.msExitFullscreen)
+              window.document.msExitFullscreen();
+            break;
+        }
+        var isJotForm = e.origin.indexOf('jotform') > -1 ? true : false;
+        if (
+          isJotForm &&
+          'contentWindow' in iframe &&
+          'postMessage' in iframe.contentWindow
+        ) {
+          var urls = {
+            docurl: encodeURIComponent(document.URL),
+            referrer: encodeURIComponent(document.referrer),
+          };
+          iframe.contentWindow.postMessage(
+            JSON.stringify({ type: 'urls', value: urls }),
+            '*'
+          );
+        }
+      };
+      window.isPermitted = function (originUrl, whitelisted_domains) {
+        var url = document.createElement('a');
+        url.href = originUrl;
+        var hostname = url.hostname;
+        var result = false;
+        if (typeof hostname !== 'undefined') {
+          whitelisted_domains.forEach(function (element) {
             if (
-              isJotForm &&
-              'contentWindow' in iframe &&
-              'postMessage' in iframe.contentWindow
+              hostname.slice(-1 * element.length - 1) === '.'.concat(element) ||
+              hostname === element
             ) {
-              var urls = {
-                docurl: encodeURIComponent(document.URL),
-                referrer: encodeURIComponent(document.referrer),
-              };
-              iframe.contentWindow.postMessage(
-                JSON.stringify({ type: 'urls', value: urls }),
-                '*'
-              );
+              result = true;
             }
-          };
-          window.isPermitted = function (originUrl, whitelisted_domains) {
-            var url = document.createElement('a');
-            url.href = originUrl;
-            var hostname = url.hostname;
-            var result = false;
-            if (typeof hostname !== 'undefined') {
-              whitelisted_domains.forEach(function (element) {
-                if (
-                  hostname.slice(-1 * element.length - 1) ===
-                    '.'.concat(element) ||
-                  hostname === element
-                ) {
-                  result = true;
-                }
-              });
-              return result;
-            }
-          };
-          if (window.addEventListener) {
-            window.addEventListener('message', handleIFrameMessage, false);
-          } else if (window.attachEvent) {
-            window.attachEvent('onmessage', handleIFrameMessage);
-          }
-        </script>
-        <!-- <form id="contact-form" autocomplete="on">
-          <div class="flex-item">
-            <input
-              type="text"
-              name="given-name"
-              aria-label="First Name"
-              id="given-name"
-              autocomplete="given-name"
-              placeholder="First Name"
-              required
-            />
-            <p class="required">Required<span>*</span></p>
-          </div>
-          <div class="flex-item">
-            <input
-              type="text"
-              name="family-name"
-              aria-label="Last Name"
-              id="family-name"
-              autocomplete="family-name"
-              placeholder="Last Name"
-              required
-            />
-            <p class="required">Required<span>*</span></p>
-          </div>
-          <div class="flex-item">
-            <input
-              type="email"
-              name="email"
-              aria-label="Email"
-              id="email"
-              autocomplete="email"
-              placeholder="Email"
-              required
-            />
-            <p class="required">Required<span>*</span></p>
-          </div>
-          <div class="flex-item">
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              aria-label="Phone number"
-              autocomplete="tel"
-              placeholder="Phone number"
-              inputmode="tel"
-              pattern="[0-9]{10,15}"
-              title="Phone number should be between 10-15 digits"
-            />
-          </div>
-          <div class="flex-item">
-            <input
-              type="text"
-              id="position"
-              name="position"
-              aria-label="position"
-              placeholder="Position"
-            />
-          </div>
-          <div class="flex-item">
-            <input
-              type="text"
-              id="company"
-              name="company"
-              aria-label="company"
-              placeholder="Company"
-            />
-          </div>
-          <div class="services-section">
-            <h4>
-              What services are you interested in? (select all that apply)
-            </h4>
-            <div class="services-selection-container">
-              <div>
-                <input
-                  type="checkbox"
-                  id="service1"
-                  name="Milestone Inspection"
-                  value="Milestone Inspection"
-                />
-                <label for="service1">Milestone Inspection</label>
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="service2"
-                  name="Building Safety and Recertification"
-                  value="Building Safety and Recertification"
-                />
-                <label for="service2"
-                  >Building Safety and Recertification</label
-                >
-              </div>
-              <div>
-                <input type="checkbox" id="service3" name="SIRS" value="SIRS" />
-                <label for="service3">SIRS</label>
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="service4"
-                  name="Property Turnover and Condition Assessment"
-                  value="Property Turnover and Condition Assessment"
-                />
-                <label for="service4"
-                  >Property Turnover and Condition Assessment</label
-                >
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="service5"
-                  name="Construction Litigation and Expert Witness"
-                  value="Construction Litigation and Expert Witness"
-                />
-                <label for="service5"
-                  >Construction Litigation and Expert Witness</label
-                >
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="service6"
-                  name="Owner Representation"
-                  value="Owner Representation"
-                />
-                <label for="service6">Owner Representation</label>
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="service7"
-                  name="Commercial sUSADrone Inspection"
-                  value="Commercial sUSADrone Inspection"
-                />
-                <label for="service7">Commercial sUSADrone Inspection</label>
-              </div>
-            </div>
-          </div>
-          <textarea
-            id="message"
-            name="user_message"
-            placeholder="Type your message here"
-            aria-label="Type your message here"
-            rows="4"
-            cols="10"
-            required
-          ></textarea>
-          <p class="required">Required<span>*</span></p>
-          <div class="button-container">
-            <button type="submit">
-              Submit<span
-                ><svg class="submit-icon">
-                  <use xlink:href="#icon-mavens-arrow-right" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </form> -->
-        <div id="thank-you-message">
-          <p class="thank-you-message">
-            Thank you for submitting this form. Someone from our team will be in
-            touch in the next 24 hours.
-          </p>
-          <a href="/"> <button>Go Back To Home</button></a>
-        </div>
-      </div>
-    </div>
+          });
+          return result;
+        }
+      };
+      if (window.addEventListener) {
+        window.addEventListener('message', handleIFrameMessage, false);
+      } else if (window.attachEvent) {
+        window.attachEvent('onmessage', handleIFrameMessage);
+      }
+    </script>
   </div>
 </div>
 {{/partial}} {{> layout/base}}
