@@ -14,7 +14,7 @@
           },
           {
             "type": "imageManager",
-            "id": "imageUrl1",
+            "id": "imageUrlOne",
             "label": "Project Image 1",
             "default": "https://picsum.photos/619/443"
           },
@@ -44,7 +44,7 @@
           },
           {
             "type": "imageManager",
-            "id": "imageUrl2",
+            "id": "imageUrlTwo",
             "label": "Project Image 2",
             "default": "https://picsum.photos/619/443"
           },
