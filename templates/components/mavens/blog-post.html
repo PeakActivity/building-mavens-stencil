@@ -1,29 +1,27 @@
 <article class="mavens-blog-article">
   <div class="mavens__max__width__container">
-    <div class="mavens-blog-post-body">
-      <header class="mavens-blog-header">
-        <h1 class="mavens-blog-title">
-          <a href="{{post.url}}">{{post.title}} </a>
-        </h1>
-        <div class="mavens-blog-details-container">
-          {{#if post.author}}
-          <div>
-            <p class="mavens-blog-details-label">By</p>
-            <p class="mavens-blog-details">{{post.author}}</p>
-          </div>
-          {{/if}} {{#if post.date_published}}
-          <div id="date">
-            <p class="mavens-blog-details-label">Date</p>
-            <p class="mavens-blog-details">{{post.date_published}}</p>
-          </div>
-          {{/if}}
+    <header class="mavens-blog-header">
+      <h1 class="mavens-blog-title">
+        <a href="{{post.url}}">{{post.title}} </a>
+      </h1>
+      <div class="mavens-blog-details-container">
+        {{#if post.author}}
+        <div>
+          <p class="mavens-blog-details-label">By</p>
+          <p class="mavens-blog-details">{{post.author}}</p>
         </div>
-      </header>
-    </div>
+        {{/if}} {{#if post.date_published}}
+        <div id="date">
+          <p class="mavens-blog-details-label">Date</p>
+          <p class="mavens-blog-details">{{post.date_published}}</p>
+        </div>
+        {{/if}}
+      </div>
+    </header>
   </div>
 
   <div style="background-color: white">
-    <div class="blog-post-body">
+    <div class="mavens__max__width__container">
       <div class="mavens-blog-post">
         {{#if post.body}} {{{post.body}}} {{else}} {{{post.summary}}} {{#if
         post.show_read_more}} &hellip;
