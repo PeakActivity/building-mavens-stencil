@@ -14,10 +14,8 @@
       let date = document.getElementById('date');
       date.style.opacity = 1;
     }
-
-    // Output the result
-    console.log(hasProjects);
   });
 </script>
 {{/partial}} {{#partial "page"}} {{> components/mavens/blog-post post=blog.post
-show_tags=true is_blog_post=true}} {{/partial}} {{> layout/base}}
+show_tags=true is_blog_post=true show_date=false}} {{/partial}} {{>
+layout/base}}

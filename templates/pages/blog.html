@@ -23,10 +23,13 @@ blog:
 
     // get path to current page
     var path = window.location.pathname;
-    console.log('path', path);
     // if path includes projects, set element with class id to hidden
     if (path.includes('projects')) {
-      document.getElementById('date').style.display = 'none';
+      // document.getElementById('date').style.display = 'none';
+      let arr = Array.from(document.getElementsByClassName('date'));
+      arr.forEach((element) => {
+        element.style.display = 'none';
+      });
     }
   });
 </script>
