@@ -42,6 +42,10 @@
   width: 100%;
   z-index: zIndex('higher');
 
+  &.is-open{
+    align-items: flex-start;
+  }
+
   @include breakpoint('medium') {
     border-bottom: container('border');
     display: flex;
@@ -222,6 +226,10 @@
   padding: 0 remCalc(18);
   position: absolute;
   z-index: zIndex('high');
+
+  &.is-open {
+    position: initial;
+  }
 
   @include breakpoint('medium') {
     display: none;
