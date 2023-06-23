@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 28px;
+  padding-bottom: 14px;
+
   gap: 40px;
 
   .mavens-nav-img {
@@ -32,9 +34,53 @@
     justify-content: center;
     padding: 0px;
     height: 55px;
-
     .mavens-nav-items {
       display: none;
     }
+  }
+}
+
+.mavens-mobile-nav {
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  .mavens-mobile-nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    height: 100%;
+    .mavens-mobile-nav-item {
+      font-size: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 1px #121212;
+      padding: 20px 0px;
+      .menu-icon {
+        height: 40px;
+        width: 40px;
+        color: #00308c;
+      }
+      text-decoration: none;
+    }
+  }
+
+  .social-icon-list {
+    display: flex;
+    gap: 58px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    .social-icon {
+      height: 21px;
+      width: 21px;
+      fill: #717171;
+    }
+  }
+
+  @include breakpoint('medium') {
+    display: none;
   }
 }
