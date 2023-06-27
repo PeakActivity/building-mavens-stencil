@@ -2,7 +2,7 @@
   .mavens__project__section {
     padding: 80px 0px;
   }
-  .mavens__project__section h3 {
+  .mavens__project__section h2 {
     font-size: 48px;
     margin-bottom: 2.28rem;
   }
@@ -76,7 +76,7 @@
     .mavens__project__section {
       padding: 140px 0px;
     }
-    .mavens__project__section h3 {
+    .mavens__project__section h2 {
       font-size: 64px;
     }
   }
@@ -85,13 +85,17 @@
   <div class="mavens__max__width__container">
     <div class="mavens__project__section">
       <div><button class="mavens__pill brown">Our Projects</button></div>
-      <h3>{{sectionTitle}}</h3>
+      <h2>{{sectionTitle}}</h2>
       <div class="mavens__project__container">
         <a href="{{blogLink1}}">
           <div class="mavens__project__card">
             <div>
-              <img src="{{imageUrlOne.src}}" alt="Project Image" class="mavens__project__image" />
-              <h4 class="mavens__image__subheading">{{blogTitle1}}</h4>
+              <img
+                src="{{imageUrlOne.src}}"
+                alt="Project Image"
+                class="mavens__project__image"
+              />
+              <h3 class="mavens__image__subheading">{{blogTitle1}}</h3>
               <p class="mavens__image__subtext">{{blogContent1}}</p>
               <div class="mavens__date">
                 <p>{{blogDate1}}</p>
@@ -103,8 +107,12 @@
         <a href="{{blogLink2}}">
           <div class="mavens__project__card">
             <div>
-              <img src="{{imageUrlTwo.src}}" alt="Project Image" class="mavens__project__image" />
-              <h4 class="mavens__image__subheading">{{blogTitle2}}</h4>
+              <img
+                src="{{imageUrlTwo.src}}"
+                alt="Project Image"
+                class="mavens__project__image"
+              />
+              <h3 class="mavens__image__subheading">{{blogTitle2}}</h3>
               <p class="mavens__image__subtext">{{blogContent2}}</p>
               <div class="mavens__date">
                 <p>{{blogDate2}}</p>

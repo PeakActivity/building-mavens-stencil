@@ -15,7 +15,9 @@
 
 .mavens__meet__the__team__section {
   padding: 47px 0px;
-  h1 {
+
+  .name,
+  .team-title {
     color: white;
     font-size: 48px;
   }
@@ -31,9 +33,9 @@
         line-height: 1;
         color: white;
       }
-      h1,
-      h2 {
+      .title {
         margin-bottom: 8px;
+        font-size: 24px;
       }
       display: flex;
       .headshot {

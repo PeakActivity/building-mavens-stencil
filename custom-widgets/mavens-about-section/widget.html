@@ -1,393 +1,430 @@
 <style>
+  .mavens__services__section {
+    background-color: white;
+    color: black;
+    padding: 80px 0px;
+    border-bottom: 1px solid #d1cac7;
+  }
+
+  .mavens__services__section h2 {
+    color: black;
+    font-size: 50px;
+    margin-top: 2rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
     .mavens__services__section {
-        background-color: white;
-        color: black;
-        padding: 80px 0px;
-        border-bottom: 1px solid #d1cac7;
+      padding: 140px 0px;
     }
 
     .mavens__services__section h2 {
-        color: black;
-        font-size: 50px;
-        margin-top: 2rem;
-        line-height: 1;
-        margin-bottom: 2rem;
-    }
-
-    @media (min-width: 768px) {
-        .mavens__services__section {
-            padding: 140px 0px;
-        }
-
-        .mavens__services__section h2 {
-            font-size: 64px;
-        }
-
-        .mavens__services__section .mavens__services__header {
-            padding-bottom: 140px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
-        .mavens__services__section .mavens__services__header h2 {
-            font-size: 62px;
-        }
-
-        .mavens__services__section .mavens__services__header h3 {
-            font-size: 32px;
-        }
+      font-size: 64px;
     }
 
     .mavens__services__section .mavens__services__header {
-        padding-bottom: 80px;
+      padding-bottom: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
 
-    .mavens__services__section .mavens__services__container {
-        background-color: white;
-        border-bottom: 1px solid #d1cac7;
+    .mavens__services__section .mavens__services__header h2 {
+      font-size: 62px;
     }
 
-    .mavens__services__section .mavens__services__container a {
-        text-decoration: none;
+    .mavens__services__section .mavens__services__header p {
+      font-size: 32px;
+    }
+  }
+
+  .mavens__services__section .mavens__services__header {
+    padding-bottom: 80px;
+  }
+
+  .mavens__services__section .mavens__services__container {
+    background-color: white;
+    border-bottom: 1px solid #d1cac7;
+  }
+
+  .mavens__services__section .mavens__services__container a {
+    text-decoration: none;
+  }
+
+  .mavens__services__section .mavens__services__container > div:last-child {
+    padding: 80px 0px;
+  }
+
+  .mavens__services__section
+    .mavens__services__container
+    .mavens__service__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    border-top: 1px solid #000;
+    padding-top: 40px;
+  }
+
+  .mavens__services__section
+    .mavens__services__container
+    .mavens__service__card:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .mavens__services__section
+    .mavens__services__container
+    .mavens__service__card:last-child {
+    padding-bottom: 80px;
+  }
+
+  .mavens__services__section
+    .mavens__services__container
+    .mavens__service__card
+    .mavens__pill {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    margin-left: 8px;
+  }
+
+  .mavens__services__section
+    .mavens__services__container
+    .mavens__service__card
+    div {
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+
+  .mavens__services__section
+    .mavens__services__container
+    .mavens__service__card
+    div
+    .services-arrow-icon {
+    border-radius: 50%;
+    transition: all 0.1s linear;
+    background-color: transparent;
+    color: #00308c;
+    min-width: 150px;
+    width: 150px;
+    min-height: 150px;
+    height: 150px;
+  }
+
+  @media (min-width: 768px) {
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card {
+      flex-direction: row;
+      align-items: center;
     }
 
-    .mavens__services__section .mavens__services__container>div:last-child {
-        padding: 80px 0px;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card:hover
+      h3 {
+      color: #b58f47;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
     }
 
-    .mavens__services__section .mavens__services__container .mavens__service__card {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 40px;
-        border-top: 1px solid #000;
-        padding-top: 40px;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card:hover
+      .services-arrow-icon {
+      color: white;
+      animation: rotate-animation 0.1s linear forwards;
+      transition: all 0.1s linear;
+      background-color: #b58f47;
+      color: white;
     }
 
-    .mavens__services__section .mavens__services__container .mavens__service__card:first-child {
-        margin-top: 0;
-        border-top: none;
-        padding-top: 0;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card
+      h3 {
+      color: black;
+      font-size: 32px;
+      margin: 0;
+      line-height: 1;
+      transition: all 0.1s ease-in-out;
     }
 
-    .mavens__services__section .mavens__services__container .mavens__service__card:last-child {
-        padding-bottom: 80px;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card
+      .mavens__service__text__container {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
     }
 
-    .mavens__services__section .mavens__services__container .mavens__service__card .mavens__pill {
-        align-self: flex-start;
-        margin-bottom: 10px;
-        margin-left: 8px;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card
+      .mavens__pill {
+      margin-right: 40px;
+      margin-bottom: 0;
+      margin-top: 8px;
     }
 
-    .mavens__services__section .mavens__services__container .mavens__service__card div {
-        display: flex;
-        align-items: flex-start;
-        align-self: flex-start;
-        margin-left: 10px;
-        margin-top: 0;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card
+      div {
+      align-items: center;
     }
 
-    .mavens__services__section .mavens__services__container .mavens__service__card div .services-arrow-icon {
-        border-radius: 50%;
-        transition: all 0.1s linear;
-        background-color: transparent;
-        color: #00308c;
-        min-width: 150px;
-        width: 150px;
-        min-height: 150px;
-        height: 150px;
+    .mavens__services__section
+      .mavens__services__container
+      .mavens__service__card
+      div
+      h3 {
+      margin: 0;
+      font-size: 83px;
     }
+  }
 
-    @media (min-width: 768px) {
-        .mavens__services__section .mavens__services__container .mavens__service__card {
-            flex-direction: row;
-            align-items: center;
-        }
+  .mavens__about__section {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 80px 0px;
+    border-bottom: 1px solid #d1cac7;
+  }
 
-        .mavens__services__section .mavens__services__container .mavens__service__card:hover h3 {
-            color: #b58f47;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            transition: all 0.1s ease-in-out;
-            cursor: pointer;
-        }
+  .mavens__about__section .left {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
 
-        .mavens__services__section .mavens__services__container .mavens__service__card:hover .services-arrow-icon {
-            color: white;
-            animation: rotate-animation 0.1s linear forwards;
-            transition: all 0.1s linear;
-            background-color: #b58f47;
-            color: white;
-        }
+  .mavens__about__section .right {
+    flex: 3;
+    /* Adjust the flex value to distribute the space evenly */
+  }
 
-        .mavens__services__section .mavens__services__container .mavens__service__card h3 {
-            color: black;
-            font-size: 32px;
-            margin: 0;
-            line-height: 1;
-            transition: all 0.1s ease-in-out;
-        }
+  .mavens__about__section .right h2 {
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
 
-        .mavens__services__section .mavens__services__container .mavens__service__card .mavens__service__text__container {
-            display: flex;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .mavens__services__section .mavens__services__container .mavens__service__card .mavens__pill {
-            margin-right: 40px;
-            margin-bottom: 0;
-            margin-top: 8px;
-        }
-
-        .mavens__services__section .mavens__services__container .mavens__service__card div {
-            align-items: center;
-        }
-
-        .mavens__services__section .mavens__services__container .mavens__service__card div h3 {
-            margin: 0;
-            font-size: 83px;
-        }
-    }
-
+  @media (min-width: 768px) {
     .mavens__about__section {
-        background-color: white;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        padding: 80px 0px;
-        border-bottom: 1px solid #d1cac7;
+      flex-direction: row;
+      padding: 140px 0px;
     }
 
     .mavens__about__section .left {
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex: 1;
-        text-align: left;
-        margin-bottom: 2rem;
+      margin-bottom: 0;
+      margin-top: 0;
     }
 
     .mavens__about__section .right {
-        flex: 3;
-        /* Adjust the flex value to distribute the space evenly */
+      margin-bottom: 0;
     }
 
     .mavens__about__section .right h2 {
-        color: black;
-        font-size: 50px;
-        margin: 0;
-        line-height: 1;
-        margin-bottom: 2rem;
+      font-size: 64px;
     }
+  }
 
-    @media (min-width: 768px) {
-        .mavens__about__section {
-            flex-direction: row;
-            padding: 140px 0px;
-        }
+  .mavens__services__container {
+    background-color: white;
+  }
 
-        .mavens__about__section .left {
-            margin-bottom: 0;
-            margin-top: 0;
-        }
+  .mavens__services__container .mavens__service__card {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #000;
+    padding-top: 40px;
+  }
 
-        .mavens__about__section .right {
-            margin-bottom: 0;
-        }
+  .mavens__services__container .mavens__service__card:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
 
-        .mavens__about__section .right h2 {
-            font-size: 64px;
-        }
-    }
+  .mavens__services__container .mavens__service__card:last-child {
+    padding-bottom: 40px;
+  }
 
-    .mavens__services__container {
-        background-color: white;
-    }
+  .mavens__services__container .mavens__service__card .mavens__pill {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    margin-left: 8px;
+  }
 
+  .mavens__services__container .mavens__service__card div {
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-left: 10px;
+  }
+
+  .mavens__services__container .mavens__service__card div h3 {
+    color: black;
+    font-size: 32px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .mavens__services__container .mavens__service__card div .icon {
+    align-self: flex-start;
+    font-size: 48px;
+  }
+
+  @media (min-width: 768px) {
     .mavens__services__container .mavens__service__card {
-        display: flex;
-        flex-direction: column;
-        border-top: 1px solid #000;
-        padding-top: 40px;
+      flex-direction: row;
+      align-items: center;
     }
 
-    .mavens__services__container .mavens__service__card:first-child {
-        margin-top: 0;
-        border-top: none;
-        padding-top: 0;
-    }
-
-    .mavens__services__container .mavens__service__card:last-child {
-        padding-bottom: 40px;
+    .mavens__services__container
+      .mavens__service__card
+      .mavens__service__text__container {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
     }
 
     .mavens__services__container .mavens__service__card .mavens__pill {
-        align-self: flex-start;
-        margin-bottom: 10px;
-        margin-left: 8px;
+      margin-right: 40px;
+      margin-bottom: 0;
+      margin-top: 8px;
     }
 
     .mavens__services__container .mavens__service__card div {
-        display: flex;
-        align-items: flex-start;
-        align-self: flex-start;
-        margin-left: 10px;
+      align-items: center;
     }
 
     .mavens__services__container .mavens__service__card div h3 {
-        color: black;
-        font-size: 32px;
-        margin: 0;
-        line-height: 1;
+      margin: 0;
+      font-size: 64px;
     }
+  }
 
-    .mavens__services__container .mavens__service__card div .icon {
-        align-self: flex-start;
-        font-size: 48px;
-    }
-
-    @media (min-width: 768px) {
-        .mavens__services__container .mavens__service__card {
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .mavens__services__container .mavens__service__card .mavens__service__text__container {
-            display: flex;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .mavens__services__container .mavens__service__card .mavens__pill {
-            margin-right: 40px;
-            margin-bottom: 0;
-            margin-top: 8px;
-        }
-
-        .mavens__services__container .mavens__service__card div {
-            align-items: center;
-        }
-
-        .mavens__services__container .mavens__service__card div h3 {
-            margin: 0;
-            font-size: 64px;
-        }
-    }
-
-    .mavens__services {
-        color: black;
-        display: flex;
-        align-items: flex-start;
-    }
-    .mavens__services .icon-container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .mavens__services .icon-container .icon {
-        font-size: 2em;
-        height: 2em;
-        width: 2em;
-    }
-    .mavens__services .middle {
-        height: 100%;
-        flex-grow: 1;
-    }
-    .mavens__services .middle h2 {
-        margin: 0;
-        line-height: 1;
-        font-size: 4em;
-        color: black;
-    }
- 
+  .mavens__services {
+    color: black;
+    display: flex;
+    align-items: flex-start;
+  }
+  .mavens__services .icon-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mavens__services .icon-container .icon {
+    font-size: 2em;
+    height: 2em;
+    width: 2em;
+  }
+  .mavens__services .middle {
+    height: 100%;
+    flex-grow: 1;
+  }
+  .mavens__services .middle h2 {
+    margin: 0;
+    line-height: 1;
+    font-size: 4em;
+    color: black;
+  }
 </style>
 
 <div style="background-color: white">
-    <div class="mavens__max__width__container">
-        <section class="mavens__about__section">
-            <div class="left">
-                <button class="mavens__pill brown">About Us</button>
-            </div>
-            <div class="right">
-                <div>
-                    <h2>{{aboutus-title}}</h2>
-                    <p>
-                        {{aboutus-content}}
-                    </p>
-                </div>
-                <form action="{{aboutus-CTA-URL}}">
-                    <button class="mavens__pill">
-                        <span>{{aboutus-CTA-title}}</span>
-                        <svg class="icon">
-                            <use xlink:href="#icon-mavens-arrow-right" />
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </section>
+  <div class="mavens__max__width__container">
+    <section class="mavens__about__section">
+      <div class="left">
+        <button class="mavens__pill brown">About Us</button>
+      </div>
+      <div class="right">
+        <div>
+          <h2>{{aboutus-title}}</h2>
+          <p>{{aboutus-content}}</p>
+        </div>
+        <form action="{{aboutus-CTA-URL}}">
+          <button class="mavens__pill">
+            <span>{{aboutus-CTA-title}}</span>
+            <svg class="icon">
+              <use xlink:href="#icon-mavens-arrow-right" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
 
-        <section class="mavens__services__section">
-            <div class="mavens__services__header">
-                <div>
-                    <button class="mavens__pill brown">
-                        <span>Our Service</span>
-                    </button>
-                </div>
-                <h2>{{services-title}}</h2>
-                <h3>
-                    {{services-subtitle}}
-                </h3>
+    <section class="mavens__services__section">
+      <div class="mavens__services__header">
+        <div>
+          <button class="mavens__pill brown">
+            <span>Our Service</span>
+          </button>
+        </div>
+        <h2>{{services-title}}</h2>
+        <p>{{services-subtitle}}</p>
+      </div>
+      <div class="mavens__services__container">
+        <a href="{{services-one-URL}}">
+          <div class="mavens__service__card">
+            <button class="mavens__pill brown">01</button>
+            <div class="mavens__service__text__container">
+              <h3>{{services-one}}</h3>
+              <svg class="services-arrow-icon">
+                <use xlink:href="#icon-mavens-arrow-right" />
+              </svg>
             </div>
-            <div class="mavens__services__container">
-                <a href="{{services-one-URL}}">
-                    <div class="mavens__service__card">
-                        <button class="mavens__pill brown">01</button>
-                        <div class="mavens__service__text__container">
-                            <h3>{{services-one}}</h3>
-                            <svg class="services-arrow-icon">
-                                <use xlink:href="#icon-mavens-arrow-right" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{services-two-URL}}">
-                    <div class="mavens__service__card">
-                        <button class="mavens__pill brown">02</button>
-                        <div class="mavens__service__text__container">
-                            <h3>{{services-two}}</h3>
-                            <svg class="services-arrow-icon">
-                                <use xlink:href="#icon-mavens-arrow-right" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{services-three-URL}}">
-                    <div class="mavens__service__card">
-                        <button class="mavens__pill brown">03</button>
-                        <div class="mavens__service__text__container">
-                            <h3>{{services-three}}</h3>
-                            <svg class="services-arrow-icon">
-                                <use xlink:href="#icon-mavens-arrow-right" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <div>
-                    <form action="{{services-CTA-URL}}">
-                        <button class="mavens__pill">
-                            <span>{{services-CTA-text}}</span>
-                            <svg class="icon">
-                                <use xlink:href="#icon-mavens-arrow-right" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+          </div>
+        </a>
+        <a href="{{services-two-URL}}">
+          <div class="mavens__service__card">
+            <button class="mavens__pill brown">02</button>
+            <div class="mavens__service__text__container">
+              <h3>{{services-two}}</h3>
+              <svg class="services-arrow-icon">
+                <use xlink:href="#icon-mavens-arrow-right" />
+              </svg>
             </div>
-        </section>
-    </div>
+          </div>
+        </a>
+        <a href="{{services-three-URL}}">
+          <div class="mavens__service__card">
+            <button class="mavens__pill brown">03</button>
+            <div class="mavens__service__text__container">
+              <h3>{{services-three}}</h3>
+              <svg class="services-arrow-icon">
+                <use xlink:href="#icon-mavens-arrow-right" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <div>
+          <form action="{{services-CTA-URL}}">
+            <button class="mavens__pill">
+              <span>{{services-CTA-text}}</span>
+              <svg class="icon">
+                <use xlink:href="#icon-mavens-arrow-right" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

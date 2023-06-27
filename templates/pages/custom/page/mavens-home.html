@@ -4,27 +4,24 @@ blog:
     limit: 3
 ---
 
-{{#partial "head"}} 
+{{#partial "head"}}
 
 <script>
-$(document).ready(function(){
-  $('.slider').slick({
+  $(document).ready(function () {
+    $('.slider').slick({
       vertical: true,
       autoplay: true,
       arrows: false,
       autoplaySpeed: 3000,
-      speed: 300
+      speed: 300,
     });
-});
+  });
 </script>
 {{/partial}} {{#partial "page"}}
 <div class="mavens__base">
   {{{region name="mavens-text-hero"}}} {{{region name="mavens-hero-video"}}}
   {{{region name="mavens-about-section"}}} {{{region name="mavens-who-we-are"}}}
-  {{{region name="mavens-our-projects"}}}
-  
-
-  {{{region name="mavens-our-blogs"}}}
+  {{{region name="mavens-our-projects"}}} {{{region name="mavens-our-blogs"}}}
   <section class="mavens__blog__section">
     <div class="mavens__max__width__container">
       <div class="mavens__blog__container">
@@ -32,9 +29,7 @@ $(document).ready(function(){
           <button class="mavens__pill brown">
             <span>Our Blogs</span>
           </button>
-          <h3>
-            Keep up to date with the latest news
-          </h3>
+          <h2>Keep up to date with the latest news</h2>
         </div>
 
         {{#each blog.recent_posts}}
@@ -48,7 +43,7 @@ $(document).ready(function(){
               />
             </div>
             <div class="mavens__blog__title__container">
-              <h4 class="mavens__blog__title">{{title}}</h4>
+              <h3 class="mavens__blog__title">{{title}}</h3>
               <div class="mavens__blog__info">
                 {{#if tags}} {{#each tags}}
                 <p class="category">{{name}}</p>
@@ -70,7 +65,5 @@ $(document).ready(function(){
     </div>
   </section>
 
-
   {{/partial}} {{> layout/base}}
 </div>
-

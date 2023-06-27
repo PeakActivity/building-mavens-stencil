@@ -9,7 +9,7 @@
     overflow: hidden;
   }
 
-  .mavens__who_we__are__container h3 {
+  .mavens__who_we__are__container h2 {
     text-align: center;
     color: white;
     font-size: 48px;
@@ -43,6 +43,14 @@
     align-items: center;
   }
 
+  .mavens__who_we__are__container
+    .mavens__who__we__are__grid
+    .mavens__grid__item
+    div
+    h3 {
+    color: white;
+  }
+
   @media (min-width: 768px) {
     .mavens__who_we__are__container h3 {
       text-align: left;
@@ -67,7 +75,7 @@
 
 <div class="mavens__max__width__container">
   <div class="mavens__who_we__are__container">
-    <h3>{{whoWeAre-title}}</h3>
+    <h2>{{whoWeAre-title}}</h2>
     <div class="mavens__subtext">
       <p>{{whoWeAre-content}}</p>
       <form action="{{whoWeAre-CTA-URL}}">
@@ -77,30 +85,30 @@
       </form>
     </div>
     <div class="mavens__who__we__are__grid">
-      <div class="mavens__grid__item">
+      <span class="mavens__grid__item">
         <div>
           <h3>{{whoWeAre-sectionOne-title}}</h3>
           <p>{{whoWeAre-sectionOne-text}}</p>
         </div>
-      </div>
-      <div class="mavens__grid__item">
+      </span>
+      <span class="mavens__grid__item">
         <div>
           <h3>{{whoWeAre-sectionTwo-title}}</h3>
           <p>{{whoWeAre-sectionTwo-text}}</p>
         </div>
-      </div>
-      <div class="mavens__grid__item">
+      </span>
+      <span class="mavens__grid__item">
         <div>
           <h3>{{whoWeAre-sectionThree-title}}</h3>
           <p>{{whoWeAre-sectionThree-text}}</p>
         </div>
-      </div>
-      <div class="mavens__grid__item">
+      </span>
+      <span class="mavens__grid__item">
         <div>
           <h3>{{whoWeAre-sectionFour-title}}</h3>
           <p>{{whoWeAre-sectionFour-text}}</p>
         </div>
-      </div>
+      </span>
     </div>
   </div>
 </div>

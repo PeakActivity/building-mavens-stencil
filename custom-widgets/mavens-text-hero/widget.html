@@ -43,7 +43,8 @@
     }
   }
 
-  .mavens-sub-text {
+  .mavens-sub-text,
+  h1 {
     flex: 1;
     text-align: left;
     padding-right: 2em;
@@ -73,7 +74,6 @@
     max-height: 100%;
     object-fit: contain;
   }
-  
 
   .mavens__cta__hero .circle .circle-text-image {
     animation: in 12s linear 0s infinite normal;
@@ -128,15 +128,15 @@
 <div class="mavens__max__width__container">
   <section>
     <div class="mavens-hero">
-      <h1 class="mavens-heading">Leaders In</h1>
+      <span class="mavens-heading">Leaders In</span>
       <div class="slider">
-        <h2 class="mavens-heading">Safety.</h2>
-        <h2 class="mavens-heading">Experience.</h2>
-        <h2 class="mavens-heading">Integrity.</h2>
+        <span class="mavens-heading">Safety.</span>
+        <span class="mavens-heading">Experience.</span>
+        <span class="mavens-heading">Integrity.</span>
       </div>
       <div class="mavens-sub-row">
         <div class="mavens-sub-text">
-          {{{content}}}
+          <h1>{{{content}}}</h1>
         </div>
         <a href="/contact-us/">
           <div class="mavens__cta__hero">
