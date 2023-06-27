@@ -7,7 +7,7 @@ $max-width: 1440px;
 
 .mavens__services__header {
   h1,
-  h2 {
+  p {
     color: white;
   }
 
@@ -15,7 +15,7 @@ $max-width: 1440px;
     font-size: 48px;
   }
 
-  h2 {
+  p {
     font-size: 20px;
   }
 
@@ -23,7 +23,7 @@ $max-width: 1440px;
     h1 {
       font-size: 80px;
     }
-    h2 {
+    p {
       font-size: 24px;
     }
 
@@ -37,7 +37,7 @@ $max-width: 1440px;
       margin-top: 0;
     }
 
-    h2 {
+    p {
       flex: 1;
     }
   }
@@ -92,12 +92,12 @@ $max-width: 1440px;
   padding-bottom: 56px;
   border-bottom: 1px solid #ded9c6;
 
-  h1,
+  h2,
   p {
     margin: 0;
     color: black;
   }
-  h1 {
+  h2 {
     padding-top: 80px;
     padding-bottom: 56px;
     font-size: 48px;
@@ -114,12 +114,12 @@ $max-width: 1440px;
       align-items: center;
       justify-content: center;
       gap: 210px;
-      h1,
+      h2,
       p {
         padding: 0;
       }
       // give each child flex 1
-      h1 {
+      h2 {
         flex: 1;
       }
       div {
@@ -139,12 +139,12 @@ $max-width: 1440px;
   padding-top: 80px;
   padding-bottom: 173px;
   background-color: white;
-  h1,
+  h2,
   p {
     margin: 0;
     color: black;
   }
-  h1 {
+  h2 {
     font-size: 48px;
     padding-top: 21px;
     padding-bottom: 47px;
@@ -172,7 +172,7 @@ $max-width: 1440px;
       padding: 20px 0px;
       transition: all 0.1s ease-in-out;
 
-      h2 {
+      h3 {
         font-size: 32px;
         margin-bottom: 16px;
         color: black;
@@ -187,7 +187,7 @@ $max-width: 1440px;
         flex-direction: column;
       }
       &:hover {
-        h2,
+        h3,
         p,
         .service__text__container {
           color: #b58f47;
@@ -204,7 +204,7 @@ $max-width: 1440px;
         .service__text__container {
           flex-direction: row;
           align-items: center;
-          h2 {
+          h3 {
             font-size: 80px;
           }
           .header__container {
