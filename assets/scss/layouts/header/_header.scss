@@ -42,7 +42,7 @@
   width: 100%;
   z-index: zIndex('higher');
 
-  &.is-open{
+  &.is-open {
     align-items: flex-start;
   }
 
@@ -52,7 +52,7 @@
     flex-direction: column;
     height: auto;
     overflow: visible;
-    position: relative;
+    position: sticky;
   }
 
   &.is-open {
