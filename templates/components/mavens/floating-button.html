@@ -1,0 +1,40 @@
+<style>
+  .floating-button {
+    flex: 0;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 8px 24px;
+    border-radius: 40px;
+    border: solid 1px #b58f47;
+    color: white;
+    background-color: #b58f47;
+    flex-grow: 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    console.log(window.location.pathname);
+    if (window.location.pathname === '/contact-us/') {
+      document.getElementById('floatingButton').style.display = 'none';
+    }
+  });
+  // check if the current URL is /contact-us
+</script>
+
+<form action="/contact-us">
+  <button id="floatingButton" class="floating-button">
+    Book Your Consultation
+  </button>
+</form>

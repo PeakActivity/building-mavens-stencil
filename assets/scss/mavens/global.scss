@@ -26,6 +26,13 @@ $max-width: 1440px;
   letter-spacing: 0.9px;
   color: #00308c;
 
+  &.header {
+    font-size: inherit;
+    background-color: #b58f47;
+    color: white;
+    text-transform: capitalize;
+  }
+
   &.brown {
     border: solid 1px #b58f47;
     color: #b58f47;
