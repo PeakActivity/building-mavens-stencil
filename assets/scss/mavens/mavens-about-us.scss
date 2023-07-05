@@ -21,9 +21,11 @@
   min-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
   .mavens__team__full__width__image {
     min-height: 378px;
+    background-image: url('https://cdn11.bigcommerce.com/s-lfrgstrp6l/images/stencil/original/image-manager/building-mavens-092-edit.jpg?t=1688577151&_gl=1*hq7uu4*_ga*MTIzMzkxMDIzMy4xNjgzOTA4MTk5*_ga_WS2VZYPC6G*MTY4ODU3NzExNy4zOS4xLjE2ODg1NzcxMzAuNDcuMC4w');
+    background-position: top;
   }
 }
 
