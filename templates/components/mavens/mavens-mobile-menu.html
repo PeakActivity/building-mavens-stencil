@@ -1,6 +1,14 @@
 <nav class="navPages">
   <div class="mavens-mobile-nav">
     <ul class="mavens-mobile-nav-items">
+      <li>
+        <a class="mavens-mobile-nav-item" href="/" aria-label="home"
+          >Home
+          <svg class="menu-icon">
+            <use xlink:href="#icon-mavens-arrow-right" />
+          </svg>
+        </a>
+      </li>
       {{#each pages}}
       <li>
         <a class="mavens-mobile-nav-item" href="{{url}}" aria-label="{{name}}"
