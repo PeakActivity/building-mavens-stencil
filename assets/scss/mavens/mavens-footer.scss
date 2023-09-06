@@ -138,15 +138,16 @@
   }
 }
 
-.mavens-legal-text {
+.mavens-bottom-footer-text {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
   margin-top: 77px;
+  padding-bottom: 40px;
 
   h4,
-  a {
+  a, .right {
     color: #d1cac7;
     font-size: 18px;
     font-weight: normal;
@@ -154,7 +155,19 @@
     white-space: nowrap;
     margin: 0;
   }
+
+  .right {
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .right {
+      text-align: left;
+    }
+  }
+
 }
+
 
 @keyframes in {
   from {
