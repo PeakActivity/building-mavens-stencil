@@ -10,16 +10,15 @@
     </a>
   </div>
   <ul class="mavens-nav-items">
-    {{#each pages}} {{#if name '===' "Contact Us"}}
-    <li class="mavens-nav-item">
-      <a href="{{url}}" aria-label="{{name}}" class="mavens__pill brown header">
-        {{name}}
-      </a>
-    </li>
-    {{else}}
+    {{#each pages}} 
     <li class="mavens-nav-item">
       <a href="{{url}}" aria-label="{{name}}"> {{name}} </a>
     </li>
-    {{/if}} {{/each}}
+    {{/each}}
+    <li class="mavens-nav-item">
+      <a href="tel:5614946425" aria-label="Call Us" class="mavens__pill brown header">
+        Call Us
+      </a>
+    </li>
   </ul>
 </nav>
